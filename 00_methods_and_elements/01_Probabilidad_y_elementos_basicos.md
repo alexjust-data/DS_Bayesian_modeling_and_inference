@@ -1,9 +1,3 @@
----
-title: "Título del Documento"
-author: "Nombre del Autor"
-date: "Fecha"
-output: html_document
----
 
 ### 1. Probabilidad y elementos básicos del método bayesiano
 
@@ -58,8 +52,6 @@ f <- function(b) {
     return(pbeta(q=0.05, shape1=shape1, shape2=shape2))
   }
 }
-
-# Prueba la función para asegurarte de que no devuelva NA
 print(f(0.1))
 print(f(1))
 
