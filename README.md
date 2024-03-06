@@ -1,10 +1,10 @@
 ### Bayesian statistical analysis
 
   
-[Métodos y elementos de la inferencia bayesiana](00_methods_and_elements)  
+#### Métodos y elementos de la inferencia bayesiana
   
-1. [Probabilidad y elementos básicos del método bayesiano](#)  
-1.1. [Probabilidad condicional y regla de Bayes](#)  
+1. [Probabilidad y elementos básicos del método bayesiano](00_methods_and_elements/01_Probabilidad_y_elementos_basicos.md)  
+1.1. [Probabilidad condicional y regla de Bayes](00_methods_and_elements/02_Probabilidad_condicional_y_regla_de_Bayes.md)  
 1.2. [Teorema de Bayes en variables aleatorias discretas](#)  
 1.3. [Teorema de Bayes en variables aleatorias continuas](#)  
   
