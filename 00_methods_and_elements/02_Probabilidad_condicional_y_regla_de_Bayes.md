@@ -1,11 +1,8 @@
 ### 1.1 Probabilidad condicional y regla de Bayes
 
-> **Pregunta :**
-> ¿Cómo se modifica la probabilidad de un evento A si sabemos de la ocurrencia de otro suceso B relacionado?
+**Pregunta : ¿Cómo se modifica la probabilidad de un evento A si sabemos de la ocurrencia de otro suceso B relacionado?**
 
-
-
-En teoría de probabilidad sobre sucesos, la regla de Bayes establece cómo se modifica la probabilidad de un evento A si sabemos de la ocurrencia de otro suceso B relacionado. Esta probabilidad *condicional* se denota \( P(A | B) \) y se lee “probabilidad condicional de A dado B”. La regla de Bayes establece que:
+En teoría de probabilidad sobre sucesos, la regla de Bayes establece cómo se modifica la probabilidad de un evento A si sabemos de la ocurrencia de otro suceso B relacionado. Esta probabilidad *condicional* se denota $P(A | B)$ y se lee “probabilidad condicional de A dado B”. La regla de Bayes establece que:
 
 $$
 P(A | B) = \frac{P(A \cap B)}{P(B)} = \frac{P(B | A)P(A)}{P(B)}
