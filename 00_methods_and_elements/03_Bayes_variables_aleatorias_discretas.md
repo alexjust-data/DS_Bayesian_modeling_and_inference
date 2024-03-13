@@ -50,7 +50,6 @@ Recientemente ha llegado a un almacén un lote de material de chapa del que se d
 | 2          | 0.50         |
 | 3          | 0.25         |
 
-> ---
 > ##### Tabla 1 
 > Distribución de probabilidad sobre $\theta$, el número de inspecciones realizadas en el proceso de fabricación de la chapa muestreada
 
