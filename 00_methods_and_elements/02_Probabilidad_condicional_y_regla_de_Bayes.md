@@ -11,7 +11,7 @@ $$
 P(A | B) = \frac{P(A \cap B)}{P(B)} = \frac{P(B | A)P(A)}{P(B)}
 $$
 
-Cuando el espacio muestral asociado al evento A se puede expresar como unión excluyente de *k* sucesos, es decir \( A_1 \cup A_2 \cup \ldots \cup A_k \), entonces la regla de Bayes se puede expresar como:
+Cuando el espacio muestral asociado al evento A se puede expresar como unión excluyente de *k* sucesos, es decir $A_1 \cup A_2 \cup \ldots \cup A_k$, entonces la regla de Bayes se puede expresar como:
 
 $$
 P(A_i | B) = \frac{P(B | A_i)P(A_i)}{\sum_{j=1}^{k} P(B | A_j)P(A_j)}
