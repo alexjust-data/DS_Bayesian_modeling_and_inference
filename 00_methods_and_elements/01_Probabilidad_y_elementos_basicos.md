@@ -21,13 +21,13 @@ Desde un punto de vista bayesiano, la probabilidad tiene dos usos diferenciados.
 
 La asignación de probabilidades en este sentido no es tarea fácil y además, es necesario que la probabilidad definida sea respetuosa con la axiomática de Kolmogorov que son condiciones indispensables para que el cálculo de probabilidades sea consistente. Habitualmente, esta cuantificación se aborda asumiendo que estas magnitudes, θ, son variables aleatorias por lo que la asignación de probabilidades utilizando modelos probabilísticos (Binomial, Normal, Poisson, etc) se convierte en una herramienta muy útil.
 
-> [!NOTE]
 > Usaremos la letra mayúscula `P` para hablar de la cuantificación de la probabilidad. Mas adelante usaremos la letra minúscula `p` para hablar de la distribución de probabilidad o función de densidad de una variable aleatoria.
 
- En el ejemplo de la reducción de masa tumoral, como $\theta$ toma valores en el intervalo **[0,1]** parece razonable asumir que $\theta ∼ beta(a,b)$, lo que también escribimos como  
+
+En el ejemplo de la reducción de masa tumoral, como $\theta$ toma valores en el intervalo **[0,1]** parece razonable asumir que $\theta ∼ beta(a,b)$, lo que también escribimos como  
  
  
- $$p(\theta | a,b) = \text{beta}(\theta | a,b) = \frac{\theta^{a-1}(1-\theta)^{b-1}}{B(a,b)}$$
+$$p(\theta | a,b) = \text{beta}(\theta | a,b) = \frac{\theta^{a-1}(1-\theta)^{b-1}}{B(a,b)}$$
 
 donde B(a,b) es la función matemática Beta de Euler.
 
@@ -41,7 +41,7 @@ $$E(\theta) = \frac{a}{a + b} = 0.07, \quad \int_{0.05}^{1} \text{beta}(\theta |
 
 Esta integral se corresponde con la `función de distribución (acumulada)` en `0.05` de la variable aleatoria beta correspondiente. 
 
-```{r}
+```r
 f <- function(b) {
   # Asegúrate de que los parámetros shape1 y shape2 sean positivos
   shape1 <- b * 0.07 / 0.93
@@ -69,4 +69,4 @@ if(inherits(solution, "try-error")) {
 }
 ```
 
-En este código hemos usado el comando pbeta(q, shape1, shape2), que proporciona la función de distribución de una variable aleatoria distribuida Beta de parámetros shape1 y shape2. En nuestra expresión de la distribución Beta shape1 es a y shape2 es b. 
+En este código hemos usado el comando `pbeta(q, shape1, shape2)`, que proporciona la función de distribución de una variable aleatoria distribuida Beta de parámetros shape1 y shape2. En nuestra expresión de la distribución Beta shape1 es a y shape2 es b. 
