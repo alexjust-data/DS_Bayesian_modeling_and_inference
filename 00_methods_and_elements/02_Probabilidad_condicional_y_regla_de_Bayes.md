@@ -37,9 +37,11 @@ $$
 
 El único dato que nos falta es `P(dopaje)`, que representa la probabilidad de que un deportista escogido al azar haya consumido sustancias dopantes o no. Esta probabilidad es bastante baja. En las últimas olimpiadas de atletismo de Pekín, solo un `1% de los atletas había consumido este tipo de sustancias`. Entonces a partir de este dato:
 
+
 $$
 P(\text{dopaje} | \text{Test+}) =\frac{0.95 * 0,01}{0,5*0,01 + 0,05*0,} \approx 0,16
 $$
+
 
 De mayor interés para el desarrollo de un curso de inferencia bayesiana es la aplicación del teorema de Bayes en variables aleatorias.
 
