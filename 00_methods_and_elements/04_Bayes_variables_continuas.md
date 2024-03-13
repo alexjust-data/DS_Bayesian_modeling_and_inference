@@ -1,6 +1,6 @@
 ### 1.3. Teorema de Bayes en variables aleatorias continuas
 
-En variables aleatorias continuas, la función de densidad condicional para$X$ dado que$Y = y$ se denota $p_{X|Y}(x | Y = y)$ (el subíndice indica cuál es la variable aleatoria, en este caso$X$, pero si el contexto lo deja claro, a veces se elimina). Mediante integración, esta función puede utilizarse para calcular probabilidades condicionales, de tal forma que:
+En variables aleatorias continuas, la función de densidad condicional para $X$ dado que $Y = y$ se denota $p_{X|Y}(x | Y = y)$ (el subíndice indica cuál es la variable aleatoria, en este caso $X$, pero si el contexto lo deja claro, a veces se elimina). Mediante integración, esta función puede utilizarse para calcular probabilidades condicionales, de tal forma que:
 
 $$
 P(X \in A | Y = y) = \int_{A} p_{X|Y}(x | Y = y) \, dx.
@@ -12,7 +12,7 @@ $$
 p_{X|Y}(x | Y = y) = \frac{p_{X,Y}(x, y)}{p_{Y}(y)} = \frac{p_{Y|X}(y | X = x)p_{X}(x)}{p_{Y}(y)}
 $$
 
-Si el rango de la variable aleatoria$X$ es el intervalo$R \subseteq \mathbb{R}$, entonces la fórmula anterior puede escribirse como:
+Si el rango de la variable aleatoria $X$ es el intervalo $R \subseteq \mathbb{R}$, entonces la fórmula anterior puede escribirse como:
 
 $$
 p_{X|Y}(x | Y = y) = \frac{p_{Y|X}(y | X = x)p_{X}(x)}{\int_{R} p_{Y|X}(y | X = x')p_{X}(x') \, dx'}
@@ -41,7 +41,7 @@ $$
 Y | \theta \sim \text{exp}(\theta).
 $$
 
-En la actualidad, este proyecto de investigación se centra en una zona del océano Atlántico donde la concentración media de sal $\theta$ es \([0.3,0.4]$ (que define el espacio paramétrico $\Theta$ asociado a este parámetro). Se desconoce el valor exacto de este parámetro pero estudios anteriores sugieren la siguiente distribución sobre $\theta$:
+En la actualidad, este proyecto de investigación se centra en una zona del océano Atlántico donde la concentración media de sal $\theta$ es $[0.3,0.4]$ (que define el espacio paramétrico $\Theta$ asociado a este parámetro). Se desconoce el valor exacto de este parámetro pero estudios anteriores sugieren la siguiente distribución sobre $\theta$ :
 
 $$
 p(\theta) = \frac{1}{C_1 \theta}, \quad \theta \in [0.3,0.4] \tag{3}
