@@ -45,10 +45,10 @@ $$
 
 En la actualidad, este proyecto de investigación se centra en una zona del océano Atlántico donde la concentración media de sal $\theta$ es $[0.3,0.4]$ (que define el espacio paramétrico $\Theta$ asociado a este parámetro). Se desconoce el valor exacto de este parámetro pero estudios anteriores sugieren la siguiente distribución sobre $\theta$ :
 
-#### 
+###### (3)
 
 $$
-p(\theta) = \frac{1}{C_1 \theta}, \quad \theta \in [0.3,0.4] \tag{3}
+p(\theta) = \frac{1}{C_1 \theta}, \quad \theta \in [0.3,0.4] 
 $$
 
 con $C_1 = \log(4/3)$ (que es la constante de proporcionalidad de esta función de densidad).
@@ -71,9 +71,9 @@ integrate(prior, lower=0.33, upper=0.37)
 
 Este grupo de investigación ha diseñado una expedición submarina para actualizar, para esta parte de la zona abisal, la información sobre $\theta$ derivada de avances de la colonia de huevos de estos peces. En una reciente inmersión se ha grabado el proceso de puesta y eclosión de una colonia de estos huevos, observando que $Y = 21.75$ (como $Y$ es el tiempo pasado las primeras 24 horas iniciales, entonces han transcurrido 24 + 21.75 horas hasta que han eclosionado los huevos).
 
-¿Cuál es la probabilidad de que $\theta$ esté en $[0.33,0.37]$ condicional a la información muestral $Y = 21.75$? Para calcular esta probabilidad tenemos que integrar sobre la distribución condicional $p(Y | \theta)$, que en virtud de la ecuación $[2]$ es
+¿Cuál es la probabilidad de que $\theta$ esté en $[0.33,0.37]$ condicional a la información muestral $Y = 21.75$? Para calcular esta probabilidad tenemos que integrar sobre la distribución condicional $p(Y | \theta)$, que en virtud de la ecuación es
 
-<br>
+###### (2)
 
 $$
 p(\theta | Y = 21.75) = \frac{p(21.75 | \theta)p(\theta)}{\int_{0.3}^{0.4} p(21.75 | \theta')p(\theta') d\theta'} = \frac{\theta e^{-21.75\theta} \frac{1}{C_1\theta}}{\int_{0.3}^{0.4} \theta' e^{-21.75\theta'} \frac{1}{C_1\theta'} d\theta'} = \frac{e^{-21.75\theta}}{\int_{0.3}^{0.4} e^{-21.75\theta'} d\theta'}, \quad \theta \in [0.3,0.4].
@@ -102,9 +102,11 @@ $$
 
 <br>
 
-> [4] Regla de Barrow : Establece que el cálculo de una integral definida se puede obtener como la diferencia de una función primitiva evaluada en los límites de integración.
+> Regla de Barrow : Establece que el cálculo de una integral definida se puede obtener como la diferencia de una función primitiva evaluada en los límites de integración.
 
-Para evitar el cálculo de las integrales anteriores de forma analítica, en R podemos usar el siguiente código que resuelve las integrales numéricamente. En primera lugar definimos como *posterior* la función en la ecuación $[4]$ sin su constante de integración:
+Para evitar el cálculo de las integrales anteriores de forma analítica, en R podemos usar el siguiente código que resuelve las integrales numéricamente. En primera lugar definimos como *posterior* la función en la ecuación sin su constante de integración:
+
+###### (4)
 
 ```r
 Cposterior <- function(theta){exp(-21.75*theta)}
