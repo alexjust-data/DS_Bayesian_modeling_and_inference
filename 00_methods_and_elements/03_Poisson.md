@@ -21,12 +21,12 @@ Esta modelación a priori está basada en la experiencia o en datos históricos,
 
 ---
 
-La media de la distribución de Poisson \( \lambda = \frac{10}{\theta} \) está definida en términos de \( \theta \), el número de controles mensuales de calidad en el proceso de fabricación. La relación inversa entre \( \lambda \) y \( \theta \) implica que:
+La media de la distribución de Poisson $\lambda = \frac{10}{\theta}$ está definida en términos de $\theta$, el número de controles mensuales de calidad en el proceso de fabricación. La relación inversa entre $\lambda$ y $\theta$ implica que:
 
-- **Cuando aumenta \( \theta \)**, es decir, hay más controles de calidad, **la media \( \lambda \) de defectos disminuye**. Esto refleja la idea de que un mayor control de calidad debería resultar en menos defectos en el producto final, ya que se corrigen más defectos durante el proceso de fabricación.
+- **Cuando aumenta $\theta$**, es decir, hay más controles de calidad, **la media $\lambda$ de defectos disminuye**. Esto refleja la idea de que un mayor control de calidad debería resultar en menos defectos en el producto final, ya que se corrigen más defectos durante el proceso de fabricación.
 
-- **Cuando disminuye \( \theta \)**, o sea, hay menos controles de calidad, **la media \( \lambda \) de defectos aumenta**. Con menos controles, hay más oportunidades de que los defectos pasen desapercibidos, aumentando así la cantidad de defectos en el producto final.
+- **Cuando disminuye $\theta$**, o sea, hay menos controles de calidad, **la media $\lambda$ de defectos aumenta**. Con menos controles, hay más oportunidades de que los defectos pasen desapercibidos, aumentando así la cantidad de defectos en el producto final.
 
-La fórmula \( \lambda = \frac{10}{\theta} \) sugiere que si no se realiza ningún control (\( \theta = 0 \)), teóricamente esperaríamos una base de 10 defectos, y esta base se ajusta proporcionalmente al número de controles realizados. Este modelo presupone que cada inspección tiene la misma efectividad en detectar defectos.
+La fórmula $\lambda = \frac{10}{\theta}$ sugiere que si no se realiza ningún control ($\theta = 0$), teóricamente esperaríamos una base de 10 defectos, y esta base se ajusta proporcionalmente al número de controles realizados. Este modelo presupone que cada inspección tiene la misma efectividad en detectar defectos.
 
 Este es un modelo simplificado y debe ser corroborado con datos reales y una comprensión detallada del proceso de fabricación para asegurarse de que es una representación precisa.
