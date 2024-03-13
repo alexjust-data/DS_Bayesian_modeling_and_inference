@@ -62,9 +62,9 @@ De este lote se ha inspeccionado una muestra de chapa de $10 m^2$ encontrando $Y
 
 - $P(\theta = 1 | Y = 5)$: Es la probabilidad condicional que queremos calcular, es decir, la probabilidad de que se haya realizado una inspección ($ \theta = 1 $), dado que se encontraron 5 defectos.
 
-- $P(Y = 5 | \theta = 1)$: Representa la probabilidad de encontrar 5 defectos si se sabe que hubo una inspección. Esta se calcula usando la distribución de Poisson con una tasa $ \lambda = \frac{10}{\theta} $, que para $ \theta = 1 $ es $ \lambda = 10 $.
+- $P(Y = 5 | \theta = 1)$: Representa la probabilidad de encontrar 5 defectos si se sabe que hubo una inspección. Esta se calcula usando la distribución de Poisson con una tasa $\lambda = \frac{10}{\theta}$, que para $\theta = 1$ es $\lambda = 10$.
 
-- $P(\theta = 1)$: Es la probabilidad a priori de que se haya realizado una inspección, la cual se proporciona en la tabla de distribución de probabilidad como 0.25 para $ \theta = 1 $.
+- $P(\theta = 1)$: Es la probabilidad a priori de que se haya realizado una inspección, la cual se proporciona en la tabla de distribución de probabilidad como 0.25 para $\theta = 1$.
 
 
 La notación $\text{Pois}(5 | \lambda)$ se refiere a la función de masa de probabilidad de la distribución de Poisson con media $ \lambda $ evaluada en 5 defectos encontrados.
