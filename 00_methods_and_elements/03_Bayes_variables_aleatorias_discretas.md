@@ -44,15 +44,15 @@ $$
 Recientemente ha llegado a un almacén un lote de material de chapa del que se desconoce su origen, por lo que no sabemos el número de controles que tuvo en el proceso de fabricación. No obstante, por la información histórica disponible del proveedor, se estima la probabilidad por cada valor posible de $y$ que hay recogida en la Tabla 1.
 
 
-
-
 | $\theta$ | p($\theta$) |
 |------------|--------------|
 | 1          | 0.25         |
 | 2          | 0.50         |
 | 3          | 0.25         |
 
-> Tabla 1 Distribución de probabilidad sobre $\theta$, el número de inspecciones realizadas en el proceso de fabricación de la chapa muestreada
+> ---
+> ##### Tabla 1 
+> Distribución de probabilidad sobre $\theta$, el número de inspecciones realizadas en el proceso de fabricación de la chapa muestreada
 
 De este lote se ha inspeccionado una muestra de chapa de $10 m^2$ encontrando $Y = 5$ desperfectos. Se quiere saber cuál es la probabilidad de que $\theta = 1$ (de que esta chapa haya pasado por un proceso de fabricación con un control mensual) condicionado a la información disponible. En forma compacta, la probabilidad que se quiere determinar es $p(\theta = 1 | Y = 5)$.
 
@@ -127,5 +127,8 @@ Tabla 2 Distribución de probabilidad sobre $\theta$, el número de inspecciones
 | 2            | 0.69                  |
 | 3            | 0.24                  |
 
+> ##### Tabla 2
+> Distribución de probabilidad sobre θ, el número de inspecciones realizadas en el proceso de fabricación de la chapa muestreada, condicional a que Y = 5
+> 
 
 Notad que $\theta$ no es una variable aleatoria (tiene un valor constante) y la distribución que le asignamos en la Tabla 1 corresponde a una cuantificación personal de lo posible de cada uno de los valores.
