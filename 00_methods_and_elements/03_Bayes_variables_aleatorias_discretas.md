@@ -27,7 +27,6 @@ En la industria aeronáutica, la chapa que forma el chasis de las naves se compo
 
 Como consecuencia de lo anterior, el número de desperfectos `Y` por cada 10m2 de chapa fabricada es una variable aleatoria que depende de la frecuencia mensual de controles pautada. En concreto, se ha determinado que para una chapa fabricada con una frecuencia media de $\theta$ controles mensuales, la distribución condicional de $Y | \theta = \theta$ (lo que se denota simplemente Y | θ) es una `Poisson` de media $10/\theta$:
 
-> La probabilidad de que la variable aleatoria $Y$ tome el valor $y$, dado el parámetro $\theta$, es igual a la función de masa de probabilidad de una distribución de Poisson con media $10/\theta$... [pero porqué Poisson](03_Poisson.md).
 
 $$
 P(Y = y | \theta) = p(y | \theta) = \text{Pois}(y | 10/\theta) = \frac{e^{-10/\theta} (10/\theta)^y}{y!}, \quad y \in \{0,1,2,\ldots\}
@@ -38,6 +37,9 @@ De forma más compacta podemos escribir:
 $$
 Y | \theta \sim \text{Pois}(10/\theta)
 $$
+
+> La probabilidad de que la variable aleatoria $Y$ tome el valor $y$, dado el parámetro $\theta$, es igual a la función de masa de probabilidad de una distribución de Poisson con media $10/\theta$... [pero porqué Poisson](03_Poisson.md).
+
 
 Recientemente ha llegado a un almacén un lote de material de chapa del que se desconoce su origen, por lo que no sabemos el número de controles que tuvo en el proceso de fabricación. No obstante, por la información histórica disponible del proveedor, se estima la probabilidad por cada valor posible de $y$ que hay recogida en la Tabla 1.
 
@@ -54,18 +56,18 @@ Recientemente ha llegado a un almacén un lote de material de chapa del que se d
 
 De este lote se ha inspeccionado una muestra de chapa de $10 m^2$ encontrando $Y = 5$ desperfectos. Se quiere saber cuál es la probabilidad de que $\theta = 1$ (de que esta chapa haya pasado por un proceso de fabricación con un control mensual) condicionado a la información disponible. En forma compacta, la probabilidad que se quiere determinar es $p(\theta = 1 | Y = 5)$.
 
-- $ \theta = 1 $: Este es el parámetro que representa el número de inspecciones realizadas en el proceso de fabricación de la chapa. Estamos interesados en la probabilidad de que haya habido una sola inspección.
+- $\theta = 1$: Este es el parámetro que representa el número de inspecciones realizadas en el proceso de fabricación de la chapa. Estamos interesados en la probabilidad de que haya habido una sola inspección.
 
-- $ Y = 5 $: Corresponde al número de defectos encontrados durante la inspección de $ 10 m^2 $ de chapa.
+- $Y = 5$: Corresponde al número de defectos encontrados durante la inspección de $ 10 m^2 $ de chapa.
 
-- $ P(\theta = 1 | Y = 5) $: Es la probabilidad condicional que queremos calcular, es decir, la probabilidad de que se haya realizado una inspección ($ \theta = 1 $), dado que se encontraron 5 defectos.
+- $P(\theta = 1 | Y = 5)$: Es la probabilidad condicional que queremos calcular, es decir, la probabilidad de que se haya realizado una inspección ($ \theta = 1 $), dado que se encontraron 5 defectos.
 
-- $ P(Y = 5 | \theta = 1) $: Representa la probabilidad de encontrar 5 defectos si se sabe que hubo una inspección. Esta se calcula usando la distribución de Poisson con una tasa $ \lambda = \frac{10}{\theta} $, que para $ \theta = 1 $ es $ \lambda = 10 $.
+- $P(Y = 5 | \theta = 1)$: Representa la probabilidad de encontrar 5 defectos si se sabe que hubo una inspección. Esta se calcula usando la distribución de Poisson con una tasa $ \lambda = \frac{10}{\theta} $, que para $ \theta = 1 $ es $ \lambda = 10 $.
 
-- $ P(\theta = 1) $: Es la probabilidad a priori de que se haya realizado una inspección, la cual se proporciona en la tabla de distribución de probabilidad como 0.25 para $ \theta = 1 $.
+- $P(\theta = 1)$: Es la probabilidad a priori de que se haya realizado una inspección, la cual se proporciona en la tabla de distribución de probabilidad como 0.25 para $ \theta = 1 $.
 
 
-La notación $ \text{Pois}(5 | \lambda) $ se refiere a la función de masa de probabilidad de la distribución de Poisson con media $ \lambda $ evaluada en 5 defectos encontrados.
+La notación $\text{Pois}(5 | \lambda)$ se refiere a la función de masa de probabilidad de la distribución de Poisson con media $ \lambda $ evaluada en 5 defectos encontrados.
 
 
 Aplicando el teorema de Bayes en la forma de la ecuación (1) se puede calcular.
