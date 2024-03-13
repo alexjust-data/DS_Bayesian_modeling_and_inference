@@ -108,7 +108,7 @@ dpois(x=5, lambda=10/1)*0.25/C
 [1] 0.07402225
 ```
 
-Por tanto, $ P(\theta = 1 | Y = 5)  = 0.07$. La información muestral ha permitido actualizar la valoración inicial de $P(θ = 1)$, disminuyendo esta probabilidad sustancialmente: hemos pasado de $0.25$ a $0.07$.
+Por tanto, $P(\theta = 1 | Y = 5)  = 0.07$. La información muestral ha permitido actualizar la valoración inicial de $P(θ = 1)$, disminuyendo esta probabilidad sustancialmente: hemos pasado de $0.25$ a $0.07$.
 
 >En el contexto del aprendizaje bayesiano, este es un proceso de actualización de creencias o probabilidades a priori con nueva evidencia. Inicialmente, sin considerar la cantidad de defectos encontrados, se estimó que la probabilidad de que hubiera solo una inspección era del 25% (es decir, $P(\theta = 1 = 0.25))$
 >
@@ -116,7 +116,7 @@ Por tanto, $ P(\theta = 1 | Y = 5)  = 0.07$. La información muestral ha permiti
 
 
 
-De forma semejante, en el ejemplo anterior podemos calcular la probabilidad condicional para $\theta$ para cada valor en su rango, en este caso $\{1,2,3\}$ (como $ \theta $ es un parámetro, a este conjunto de valores que puede tomar se le llama espacio paramétrico, normalmente simbolizado con la letra griega mayúscula $\theta$). En este caso, lo que obtenemos es la distribución condicional recogida en la Tabla 2.
+De forma semejante, en el ejemplo anterior podemos calcular la probabilidad condicional para $\theta$ para cada valor en su rango, en este caso $\{1,2,3\}$ (como $\theta$ es un parámetro, a este conjunto de valores que puede tomar se le llama espacio paramétrico, normalmente simbolizado con la letra griega mayúscula $\theta$). En este caso, lo que obtenemos es la distribución condicional recogida en la Tabla 2.
 
 Tabla 2 Distribución de probabilidad sobre $\theta$, el número de inspecciones realizadas en el proceso de fabricación de la chapa muestreada, condicional a que $Y = 5$
 
