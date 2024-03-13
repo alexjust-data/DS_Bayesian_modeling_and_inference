@@ -41,6 +41,8 @@ $$
 Y | \theta \sim \text{exp}(\theta).
 $$
 
+> [¿Porqué una variable aleatoria con una distribución exponencial condicionada?](04_exponencial.md)
+
 En la actualidad, este proyecto de investigación se centra en una zona del océano Atlántico donde la concentración media de sal $\theta$ es $[0.3,0.4]$ (que define el espacio paramétrico $\Theta$ asociado a este parámetro). Se desconoce el valor exacto de este parámetro pero estudios anteriores sugieren la siguiente distribución sobre $\theta$ :
 
 $$
@@ -49,4 +51,19 @@ $$
 
 con $C_1 = \log(4/3)$ (que es la constante de proporcionalidad de esta función de densidad).
 
-De particular interés científico es cuantificar la probabilidad de que la concentración salina esté
+De particular interés científico es cuantificar la probabilidad de que la concentración salina esté entre los valores 0.33 y 0.37, que es el intervalo de salinidad media en profundidades no abisales en el océano. Sobre la base de la cuantificación establecida de los posibles valores de $\theta$ según $p(\theta)$ están probabilidad es
+
+$$
+P(\theta \in [0.33,0.37]) = \int_{0.33}^{0.37} \frac{1}{C_1 \theta} d\theta = \frac{\log(0.37/0.33)}{\log(4/3)} \approx 0.40.
+$$
+
+Alternativamente, podríamos haber calculado numéricamente en R esta probabilidad usando el símil de sugestión que en el que primero definimos la función $p(\theta)$ en la ecuación 3 que aquí llamamos _prior_:
+
+
+```r
+prior <- function(theta){1/(theta*log(4/3))}
+
+integrate(prior, lower=0.33, upper=0.37)
+[1] 0.3976972 with absolute error <4.4e-15
+```
+
