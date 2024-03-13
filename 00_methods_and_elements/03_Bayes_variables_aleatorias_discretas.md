@@ -20,7 +20,7 @@ $$
 Vamos a ver todos estos elementos en un ejemplo que contiene los principales ingredientes en el aprendizaje bayesiano:
 
 
-**Ejemplo 2**
+##### Ejemplo 2
 
 En la industria aeronáutica, la chapa que forma el chasis de las naves se compone de una aleación de aluminio y litio. En gran medida, la resistencia de este material depende de las impurezas que se encuentran en la superficie de la chapa como consecuencia de defectos en el proceso de fabricación. Para conseguir la mayor fiabilidad, la maquinaria utilizada en la fabricación está sujeta a severos controles cuya frecuencia se establece entre 1 a 3 controles por mes.
 
