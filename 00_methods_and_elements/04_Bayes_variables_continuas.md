@@ -27,7 +27,7 @@ $$
 Veamos ahora un ejemplo del uso del teorema de Bayes en variables aleatorias continuas.
 
 
-### Ejemplo 3
+##### Ejemplo 3
 
 Un grupo de biólogos y biólogas marinos está estudiando las características de reproducción de una especie de pez que vive en la zona abisal del océano. El tiempo hasta la eclosión en una puesta de estos peces depende de la concentración media de sal, $\theta$ (medida en gramos de sal por centilitro de agua), en esa parte del océano. En concreto, se establece que pasadas 24 h de la puesta, el tiempo (en horas) $Y$ hasta que eclosionan los huevos es una variable aleatoria cuya distribución condicionada a $\theta$ es una exponencial de media $1/\theta$:
 
