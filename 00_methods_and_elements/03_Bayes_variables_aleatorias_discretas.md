@@ -58,7 +58,7 @@ De este lote se ha inspeccionado una muestra de chapa de $10 m^2$ encontrando $Y
 
 - $\theta = 1$: Este es el parámetro que representa el número de inspecciones realizadas en el proceso de fabricación de la chapa. Estamos interesados en la probabilidad de que haya habido una sola inspección.
 
-- $Y = 5$: Corresponde al número de defectos encontrados durante la inspección de $ 10 m^2 $ de chapa.
+- $Y = 5$: Corresponde al número de defectos encontrados durante la inspección de $10 m^2$ de chapa.
 
 - $P(\theta = 1 | Y = 5)$: Es la probabilidad condicional que queremos calcular, es decir, la probabilidad de que se haya realizado una inspección ($ \theta = 1 $), dado que se encontraron 5 defectos.
 
@@ -67,7 +67,7 @@ De este lote se ha inspeccionado una muestra de chapa de $10 m^2$ encontrando $Y
 - $P(\theta = 1)$: Es la probabilidad a priori de que se haya realizado una inspección, la cual se proporciona en la tabla de distribución de probabilidad como 0.25 para $\theta = 1$.
 
 
-La notación $\text{Pois}(5 | \lambda)$ se refiere a la función de masa de probabilidad de la distribución de Poisson con media $ \lambda $ evaluada en 5 defectos encontrados.
+La notación $\text{Pois}(5 | \lambda)$ se refiere a la función de masa de probabilidad de la distribución de Poisson con media $\lambda$ evaluada en 5 defectos encontrados.
 
 
 Aplicando el teorema de Bayes en la forma de la ecuación (1) se puede calcular.
@@ -101,14 +101,14 @@ C <- dpois(x=5, lambda=10/1)*0.25 +
 
 ```
 
-y ahora la probabilidad $ P(\theta = 1 | Y = 5) $ se obtiene como:
+y ahora la probabilidad $P(\theta = 1 | Y = 5)$ se obtiene como:
 
 ```r
 dpois(x=5, lambda=10/1)*0.25/C
 [1] 0.07402225
 ```
 
-Por tanto, $ P(\theta = 1 | Y = 5)  = 0.07 $. La información muestral ha permitido actualizar la valoración inicial de $P(θ = 1)$, disminuyendo esta probabilidad sustancialmente: hemos pasado de $0.25$ a $0.07$.
+Por tanto, $ P(\theta = 1 | Y = 5)  = 0.07$. La información muestral ha permitido actualizar la valoración inicial de $P(θ = 1)$, disminuyendo esta probabilidad sustancialmente: hemos pasado de $0.25$ a $0.07$.
 
 >En el contexto del aprendizaje bayesiano, este es un proceso de actualización de creencias o probabilidades a priori con nueva evidencia. Inicialmente, sin considerar la cantidad de defectos encontrados, se estimó que la probabilidad de que hubiera solo una inspección era del 25% (es decir, $P(\theta = 1 = 0.25))$
 >
@@ -116,15 +116,16 @@ Por tanto, $ P(\theta = 1 | Y = 5)  = 0.07 $. La información muestral ha permit
 
 
 
-De forma semejante, en el ejemplo anterior podemos calcular la probabilidad condicional para $ \theta $ para cada valor en su rango, en este caso $ \{1,2,3\} $ (como $ \theta $ es un parámetro, a este conjunto de valores que puede tomar se le llama espacio paramétrico, normalmente simbolizado con la letra griega mayúscula $ \Theta $). En este caso, lo que obtenemos es la distribución condicional recogida en la Tabla 2.
+De forma semejante, en el ejemplo anterior podemos calcular la probabilidad condicional para $\theta$ para cada valor en su rango, en este caso $\{1,2,3\}$ (como $ \theta $ es un parámetro, a este conjunto de valores que puede tomar se le llama espacio paramétrico, normalmente simbolizado con la letra griega mayúscula $\Theta$). En este caso, lo que obtenemos es la distribución condicional recogida en la Tabla 2.
 
-Tabla 2 Distribución de probabilidad sobre $ \theta $, el número de inspecciones realizadas en el proceso de fabricación de la chapa muestreada, condicional a que $ Y = 5 $
+Tabla 2 Distribución de probabilidad sobre $\theta$, el número de inspecciones realizadas en el proceso de fabricación de la chapa muestreada, condicional a que $Y = 5$
+
 
 | $ \theta $ | $ p(\theta | Y = 5) $ |
 |--------------|-----------------------|
-| 0            | 0.07                  |
-| 1            | 0.69                  |
-| 2            | 0.24                  |
-| 3            | -                     |
+| 1            | 0.07                  |
+| 2            | 0.69                  |
+| 3            | 0.24                  |
+|              |                 |
 
-Notad que $ \theta $ no es una variable aleatoria (tiene un valor constante) y la distribución que le asignamos en la Tabla 1 corresponde a una cuantificación personal de lo posible de cada uno de los valores.
+Notad que $\theta$ no es una variable aleatoria (tiene un valor constante) y la distribución que le asignamos en la Tabla 1 corresponde a una cuantificación personal de lo posible de cada uno de los valores.
