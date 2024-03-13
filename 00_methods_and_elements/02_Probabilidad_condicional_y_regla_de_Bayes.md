@@ -39,7 +39,7 @@ El único dato que nos falta es `P(dopaje)`, que representa la probabilidad de q
 
 
 $$
-P(\text{dopaje} | \text{Test+}) =\frac{0.95 * 0,01}{0,5*0,01 + 0,05*0,} \approx 0,16
+P(\text{dopaje} | \text{Test+}) =\frac{0.95 * 0,01}{0,5*0,01 + 0,05*0,99} \approx 0,16
 $$
 
 
