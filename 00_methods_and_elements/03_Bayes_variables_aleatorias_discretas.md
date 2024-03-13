@@ -116,16 +116,16 @@ Por tanto, $ P(\theta = 1 | Y = 5)  = 0.07$. La información muestral ha permiti
 
 
 
-De forma semejante, en el ejemplo anterior podemos calcular la probabilidad condicional para $\theta$ para cada valor en su rango, en este caso $\{1,2,3\}$ (como $ \theta $ es un parámetro, a este conjunto de valores que puede tomar se le llama espacio paramétrico, normalmente simbolizado con la letra griega mayúscula $\Theta$). En este caso, lo que obtenemos es la distribución condicional recogida en la Tabla 2.
+De forma semejante, en el ejemplo anterior podemos calcular la probabilidad condicional para $\theta$ para cada valor en su rango, en este caso $\{1,2,3\}$ (como $ \theta $ es un parámetro, a este conjunto de valores que puede tomar se le llama espacio paramétrico, normalmente simbolizado con la letra griega mayúscula $\theta$). En este caso, lo que obtenemos es la distribución condicional recogida en la Tabla 2.
 
 Tabla 2 Distribución de probabilidad sobre $\theta$, el número de inspecciones realizadas en el proceso de fabricación de la chapa muestreada, condicional a que $Y = 5$
 
 
-| $ \theta $ | $ p(\theta | Y = 5) $ |
+| $\theta$   | $p(\theta \| Y = 5)$ |
 |--------------|-----------------------|
 | 1            | 0.07                  |
 | 2            | 0.69                  |
 | 3            | 0.24                  |
-|              |                 |
+
 
 Notad que $\theta$ no es una variable aleatoria (tiene un valor constante) y la distribución que le asignamos en la Tabla 1 corresponde a una cuantificación personal de lo posible de cada uno de los valores.
