@@ -93,12 +93,13 @@ La expresión anterior define implícitamente la distribución _a posteriori_. N
 
 $$
 \begin{align*}
-p(\mu | y) &\propto \exp \left\{ -\frac{1}{2} \left[ \frac{(y - \mu)^2}{0.01^2} + \frac{(\mu - \mu_y)^2}{\sigma_y^2} \right] \right\} \\
-&\propto \exp \left\{ -\frac{1}{2} \left[ \frac{\mu^2}{0.01^2} - \frac{2\mu y}{0.01^2} + \frac{\mu^2}{\sigma_y^2} - \frac{2\mu\mu_y}{\sigma_y^2} \right] \right\} \\
-&\propto \exp \left\{ -\frac{1}{2} \left[ \mu^2 \left( \frac{1}{0.01^2} + \frac{1}{\sigma_y^2} \right) - 2\mu \left( \frac{y}{0.01^2} + \frac{\mu_y}{\sigma_y^2} \right) \right] \right\} \\
-&\propto \exp \left\{ -\frac{1}{2} \cdot \frac{1}{B} \cdot \left[ \mu^2 - 2\mu A \right] \right\}
+p(\mu | y) &\propto \exp \left( -\frac{1}{2} \left[ \frac{(y - \mu)^2}{0.01^2} + \frac{(\mu - \mu_y)^2}{\sigma_y^2} \right] \right) \\
+&\propto \exp \left( -\frac{1}{2} \left[ \frac{\mu^2}{0.01^2} - \frac{2\mu y}{0.01^2} + \frac{\mu^2}{\sigma_y^2} - \frac{2\mu\mu_y}{\sigma_y^2} \right] \right) \\
+&\propto \exp \left( -\frac{1}{2} \left[ \mu^2 \left( \frac{1}{0.01^2} + \frac{1}{\sigma_y^2} \right) - 2\mu \left( \frac{y}{0.01^2} + \frac{\mu_y}{\sigma_y^2} \right) \right] \right) \\
+&\propto \exp \left( -\frac{1}{2} \cdot \frac{1}{B} \cdot \left[ \mu^2 - 2\mu A \right] \right)
 \end{align*}
 $$
+
 
 donde
 
@@ -166,7 +167,7 @@ Obtenemos la representación siguiente de la función de densidad $a$ priori par
 
 ![](../img/3.png)
 
-En los ejemplos vistos hasta ahora la información experimental proviene de una única observación Y. Sin embargo, lo más habitual es que el experimento observacional proporcione valores de una muestra $n$ de variables aleatorias $Y = (Y_1,Y_2,…,Y_n)$, que conforman un vector aleatorio. En la situación del ejemplo [3](04_Bayes_variables_continuas.md#ejemplo-3.md) lo lógico es obtener varias mediciones de tiempos entre puestas y eclosión de huevos de peces abisales para obtener mayor información sobre la concentración salina.
+En los ejemplos vistos hasta ahora la información experimental proviene de una única observación Y. Sin embargo, lo más habitual es que el experimento observacional proporcione valores de una muestra $n$ de variables aleatorias $Y = (Y_1,Y_2,…,Y_n)$, que conforman un vector aleatorio. En la situación del ejemplo [3](04_Bayes_variables_continuas.md#ejemplo-3) lo lógico es obtener varias mediciones de tiempos entre puestas y eclosión de huevos de peces abisales para obtener mayor información sobre la concentración salina.
 
 Esto implica que tendremos que asumir una distribución, un modelo probabilístico $p(y | \theta)$, para el vector aleatorio $Y$. El uso de la notación vectorial para los parámetros hace explícito que estos contienen potencialmente más de un parámetro, es decir $\theta = (\theta_1, …, \theta_k)$. Como anteriormente, la distribución conjunta de $Y$ viene a definir la función de verosimilitud $L(\theta,y)$, y la distribución _a posteriori_ seguirá atendiendo a la forma ya vista de:
 
