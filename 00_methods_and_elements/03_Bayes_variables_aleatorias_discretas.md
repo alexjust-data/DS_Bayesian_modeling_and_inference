@@ -12,6 +12,8 @@ $$
 
 Si el rango de $X$ es el conjunto $R \subseteq \mathbb{R}$ (R como subconjunto de los números reales), entonces:
 
+###### (1)
+
 $$
 p(X = x | Y = y) = \frac{p(Y = y | X = x)p(X = x)}{\sum_{x' \in R}p(Y = y | X = x')p(X = x')}
 $$
@@ -50,6 +52,7 @@ Recientemente ha llegado a un almacén un lote de material de chapa del que se d
 | 2          | 0.50         |
 | 3          | 0.25         |
 
+> 
 > ##### Tabla 1 
 > Distribución de probabilidad sobre $\theta$, el número de inspecciones realizadas en el proceso de fabricación de la chapa muestreada
 

@@ -13,6 +13,8 @@ p_{X|Y}(x | Y = y) = \frac{p_{X,Y}(x, y)}{p_{Y}(y)} = \frac{p_{Y|X}(y | X = x)p_
 $$
 
 Si el rango de la variable aleatoria $X$ es el intervalo $R \subseteq \mathbb{R}$, entonces la fórmula anterior puede escribirse como:
+  
+###### (2)
 
 $$
 p_{X|Y}(x | Y = y) = \frac{p_{Y|X}(y | X = x)p_{X}(x)}{\int_{R} p_{Y|X}(y | X = x')p_{X}(x') \, dx'}
