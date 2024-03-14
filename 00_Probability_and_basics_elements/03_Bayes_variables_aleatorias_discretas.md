@@ -8,7 +8,10 @@ $$
 p(X = x | Y = y) = \frac{p(X = x, Y = y)}{p(Y = y)} = \frac{p(Y = y | X = x)p(X = x)}{p(Y = y)}
 $$
 
-![](.../img/1.png)
+> _
+> 
+>![](../img/1.png)
+> _
 
 Si el rango de $X$ es el conjunto $R \subseteq \mathbb{R}$ (R como subconjunto de los números reales), entonces:
 

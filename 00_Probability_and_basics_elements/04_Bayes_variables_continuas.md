@@ -43,7 +43,7 @@ $$
 Y | \theta \sim \text{exp}(\theta).
 $$
 
-> ¿Porqué una variable aleatoria con una distribución exponencial condicionada?. [Link](04_exponencial.md)
+> ¿Porqué una variable aleatoria con una distribución exponencial condicionada?. [Link](04_exponencial)
 
 En la actualidad, este proyecto de investigación se centra en una zona del océano Atlántico donde la concentración media de sal $\theta$ es $[0.3,0.4]$ (que define el espacio paramétrico $\Theta$ asociado a este parámetro). Se desconoce el valor exacto de este parámetro pero estudios anteriores sugieren la siguiente distribución sobre $\theta$ :
 
