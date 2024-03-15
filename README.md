@@ -8,6 +8,7 @@ En la Sección 1 se habla del uso propio de la probabilidad en el método bayesi
 1.1. [Probabilidad condicional y regla de Bayes](00_methods_and_elements/02_Probabilidad_condicional_y_regla_de_Bayes.md)  
 1.2. [Teorema de Bayes en variables aleatorias discretas](00_Probability_and_basics_elements/03_Bayes_variables_aleatorias_discretas.md)  
 1.3. [Teorema de Bayes en variables aleatorias continuas](00_Probability_and_basics_elements/04_Bayes_variables_continuas.md)  
+1.4 [Priori y posteriori](00_Probability_and_basics_elements/05_priori_posteriori.md)  
   
 1. [Modelización estadística y función de verosimilitud](01_Statistical_modeling_likelihood_function/01_Statical_modeling_likehood_function.md)  
 2.1. [Independencia condicional y observaciones independientes e idénticamente distribuidas](01_Statistical_modeling_likelihood_function/02_Conditional_Independence_and_Independent_Identically_Distributed_Observations.md)  
