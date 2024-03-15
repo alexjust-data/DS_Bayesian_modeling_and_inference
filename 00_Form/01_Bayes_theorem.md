@@ -74,7 +74,7 @@ $$
 
 #### 1.2 Teorema de Bayes para variables aleatorias discretas
 
-En variables aleatorias discretas, la función de probabilidad condicional $P(X = x | Y = y)$ es la probabilidad de que $X$ valga $x$ sabiendo que $Y = y$. La función que retorna, para cada valor de $x$ en su rango, la probabilidad $P(X = x | Y = y)$ se llama _distribución condicional de $X$ dado $Y = y$_.
+En variables aleatorias discretas, la función de probabilidad condicional $P(X = x | Y = y)$ es la probabilidad de que $X$ valga $x$ sabiendo que $Y = y$. La función que retorna, para cada valor de $x$ en su rango, la probabilidad $P(X = x \| Y = y)$ se llama distribución condicional de $X$ dado $Y = y$.
 
 El teorema de Bayes establece que la probabilidad condicional se puede calcular como un sencillo cociente
 
