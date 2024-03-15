@@ -24,6 +24,7 @@ Imagina que eres deportista de élite, de pronto, en un control antidopaje que a
 
 Las especificaciones de la prueba de detección se pueden escribir como: $P(\text{Test+} |  \text{dopaje}) = P(\text{Test-} | \text{no dopaje}) = 0.95 $
 
+Ambas probabilidades son del 95%, lo que indica que la prueba tiene una alta precisión tanto para detectar correctamente a los dopados (verdaderos positivos) como para no dar falsos positivos en los no dopados (verdaderos negativos).
 
 Entonces, en virtud de la regla de Bayes, la probabilidad de que te hayas dopado es en realidad:
 
