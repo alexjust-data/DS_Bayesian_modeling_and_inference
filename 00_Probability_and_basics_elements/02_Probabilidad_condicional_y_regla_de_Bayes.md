@@ -44,3 +44,8 @@ $$
 De mayor interés para el desarrollo de un curso de inferencia bayesiana es la aplicación del teorema de Bayes en variables aleatorias.
 
 
+> **nota:**
+> Lo interesante del Teorema de Bayes es que puede mostrar cómo incluso una prueba muy precisa puede llevar a conclusiones engañosas cuando se aplica a poblaciones donde el evento que se prueba es raro (en este caso, el dopaje). La fórmula de Bayes te permite actualizar la probabilidad previa de dopaje basada en el resultado positivo de la prueba y te da la probabilidad posterior de que realmente te hayas dopado, que en este ejemplo se calcula como aproximadamente 16%, a pesar de la alta precisión de la prueba.
+>
+>
+>La paradoja aquí es que incluso con una prueba altamente precisa, si la prevalencia del dopaje es baja (solo un 1% de los atletas dopados), la mayoría de los resultados positivos serán en realidad falsos positivos. Esto es un reflejo de la "paradoja del falso positivo", donde la especificidad y la sensibilidad de la prueba deben interpretarse en el contexto de la prevalencia de la condición que se está probando.
