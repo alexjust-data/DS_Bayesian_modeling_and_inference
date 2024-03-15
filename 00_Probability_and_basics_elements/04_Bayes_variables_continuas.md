@@ -43,7 +43,8 @@ $$
 Y | \theta \sim \text{exp}(\theta).
 $$
 
-> ¿Porqué una variable aleatoria con una distribución exponencial condicionada?. [Link](04_exponencial.md)
+> **nota:** ¿Porqué una variable aleatoria con una distribución exponencial condicionada?. [Link](04_exponencial.md)
+
 
 En la actualidad, este proyecto de investigación se centra en una zona del océano Atlántico donde la concentración media de sal $\theta$ es $[0.3,0.4]$ (que define el espacio paramétrico $\Theta$ asociado a este parámetro). Se desconoce el valor exacto de este parámetro pero estudios anteriores sugieren la siguiente distribución sobre $\theta$ :
 
@@ -54,6 +55,16 @@ p(\theta) = \frac{1}{C_1 \theta}, \quad \theta \in [0.3,0.4]
 $$
 
 con $C_1 = \log(4/3)$ (que es la constante de proporcionalidad de esta función de densidad).
+
+> **nota:**
+> La distribución $p(\theta) = \frac{1}{C_1 \theta}$ para $\theta$ en el intervalo $[0.3,0.4]$ es una forma de la distribución de probabilidad a priori sobre el parámetro $\theta$, que representa la concentración media de sal en el océano. Esta es una distribución de probabilidad continua que asigna las creencias iniciales o el conocimiento sobre los posibles valores de $\theta$ antes de observar cualquier dato (en este caso, el tiempo hasta la eclosión de los huevos de peces).
+>
+>La constante $C_1$ es un factor de normalización que asegura que la integral total de $p(\theta)$ sobre el intervalo $[0.3,0.4]$ sea igual a 1, lo cual es un requisito para que sea una función de densidad de probabilidad válida según los axiomas de Kolmogorov.
+>
+>En términos más intuitivos, la función $\frac{1}{\theta}$ indica que valores más pequeños de $\theta$ (mayor concentración de sal) son menos probables que valores más grandes dentro del intervalo dado. Sin conocer $C_1$, no podemos saber las probabilidades exactas, pero sabemos que la función es inversamente proporcional a $\theta$, lo cual es una característica de la distribución de probabilidad a priori que han elegido los investigadores basándose en su conocimiento previo o en estudios anteriores.
+>
+>Para encontrar el valor de $C_1$, se debe integrar $\frac{1}{\theta}$ desde 0.3 a 0.4 y luego igualar esta integral a 1, resolviendo para $C_1$. Esto es porque la integral de una función de densidad de probabilidad sobre su rango completo debe ser igual a 1 para satisfacer los axiomas de probabilidad.
+>
 
 De particular interés científico es cuantificar la probabilidad de que la concentración salina esté entre los valores 0.33 y 0.37, que es el intervalo de salinidad media en profundidades no abisales en el océano. Sobre la base de la cuantificación establecida de los posibles valores de $\theta$ según $p(\theta)$ están probabilidad es
 
