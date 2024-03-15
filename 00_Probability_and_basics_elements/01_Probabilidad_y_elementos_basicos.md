@@ -14,8 +14,10 @@ Desde un punto de vista bayesiano, la probabilidad tiene dos usos diferenciados.
 * `experimento` : dos personas acuerdan que una de ellas lanza un dado y mantiene oculto el resultado para la otra.
 * `valores posibles` : $\theta={1,2,3,4,5,6}$
 * `No es una variable aleatoria` : $P(\theta=i) = 1/6$
----
-* `experimento` :  cuantificar la reducción media de la masa tumoral de enfermos de un tipo de cáncer sometidos a un tratamiento experimental oncológico $\theta$
+
+Reducción tumoral:
+
+* `experimento` :  cuantificar la reducción media de la masa tumoral de enfermos de un tipo de cáncer sometidos a un tratamiento experimental oncológico ($\theta$)
 * `Es un valor desconocido` : el valor concreto de $\theta$ puede considerrse deconocido.
 * `conclusión de las expertas` : $P(\theta > 0.05) = 0.1$ ; indicando que es poco probable que el tratamiento experimental reduzca en más de un 5% la masa tumoral.
 
@@ -40,6 +42,17 @@ $$
 $$E(\theta) = \frac{a}{a + b} = 0.07, \quad \int_{0.05}^{1} \text{beta}(\theta | a,b) d\theta = 0.1,$$
 
 Esta integral se corresponde con la `función de distribución (acumulada)` en `0.05` de la variable aleatoria beta correspondiente. 
+
+> **Nota:**
+> En el ejemplo, se está tratando de modelar la reducción de la masa tumoral como un porcentaje, que es un tipo de proporción. Las proporciones siempre toman valores entre 0 y 1, donde 0 representa un 0% de efectividad (ninguna reducción de la masa tumoral) y 1 representa un 100% de efectividad (eliminación completa de la masa tumoral).
+>
+>Por lo tanto, cuando se asume que \( \theta \), que representa la reducción media de la masa tumoral como resultado del tratamiento, sigue una distribución Beta, se está reconociendo que \( \theta \) es una proporción y debe estar acotada entre 0 y 1. La distribución Beta es especialmente conveniente para modelar este tipo de datos porque está definida en el intervalo [0,1] y tiene una flexibilidad considerable en su forma, que puede ajustarse utilizando los parámetros \( a \) y \( b \). Estos parámetros pueden ser elegidos de manera que reflejen cualquier conocimiento previo o creencias acerca de la eficacia del tratamiento.
+>
+>Además, la distribución Beta puede adoptar diferentes formas dependiendo de los valores de \( a \) y \( b \), que pueden reflejar distintas creencias sobre la eficacia del tratamiento antes de ver cualquier dato real. Por ejemplo, valores de \( a \) y \( b \) que sean mayores que 1 pueden reflejar una creencia de que hay una probabilidad razonable de que el tratamiento tenga algún efecto, mientras que valores cercanos a cero pueden reflejar incertidumbre o la creencia de que es probable que el tratamiento no tenga un gran efecto.
+>
+>En el contexto del ejemplo, una distribución Beta puede utilizarse para reflejar la creencia de los expertos sobre la eficacia del tratamiento, ajustando los parámetros \( a \) y \( b \) en consecuencia. La nota acerca de que \( P(\theta > 0.05) = 0.1 \) es una forma de cuantificar esa creencia, sugiriendo que, según los expertos, hay una baja probabilidad de que el tratamiento reduzca la masa tumoral en más de un 5%.
+
+
 
 ```r
 f <- function(b) {
