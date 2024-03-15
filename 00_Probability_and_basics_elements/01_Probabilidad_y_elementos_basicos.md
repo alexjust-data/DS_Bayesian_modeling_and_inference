@@ -1,5 +1,5 @@
 
-### 1. Probabilidad y elementos básicos del método bayesiano
+## Probabilidad y elementos básicos del método bayesiano
 
 Desde un punto de vista bayesiano, la probabilidad tiene dos usos diferenciados.
 
