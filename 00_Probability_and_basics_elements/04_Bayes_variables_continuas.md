@@ -31,7 +31,7 @@ Veamos ahora un ejemplo del uso del teorema de Bayes en variables aleatorias con
 
 ##### Ejemplo 3
 
-Un grupo de biólogos y biólogas marinos está estudiando las características de reproducción de una especie de pez que vive en la zona abisal del océano. El tiempo hasta la eclosión en una puesta de estos peces depende de la concentración media de sal, $\theta$ (medida en gramos de sal por centilitro de agua), en esa parte del océano. En concreto, se establece que pasadas 24 h de la puesta, el tiempo (en horas) $Y$ hasta que eclosionan los huevos es una variable aleatoria cuya distribución condicionada a $\theta$ es una exponencial de media $1/\theta$:
+Un grupo de biólogos y biólogas marinos está estudiando las características de reproducción de una especie de pez que vive en la zona abisal del océano. El tiempo hasta la eclosión en una puesta de estos peces depende de la concentración media de sal, $\theta$ (medida en gramos de sal por centilitro de agua), en esa parte del océano. En concreto, se establece que pasadas 24 h de la puesta, el tiempo (en horas) $Y$ hasta que eclosionan los huevos es una variable aleatoria cuya distribución condicionada a $\theta$ (concentración media de sal) es una exponencial de media $1/\theta$:
 
 $$
 p(Y | \theta) = \theta e^{-\theta Y}, \quad Y > 0.
@@ -43,7 +43,7 @@ $$
 Y | \theta \sim \text{exp}(\theta).
 $$
 
-> ¿Porqué una variable aleatoria con una distribución exponencial condicionada?. [Link](04_exponencial)
+> ¿Porqué una variable aleatoria con una distribución exponencial condicionada?. [Link](04_exponencial.md)
 
 En la actualidad, este proyecto de investigación se centra en una zona del océano Atlántico donde la concentración media de sal $\theta$ es $[0.3,0.4]$ (que define el espacio paramétrico $\Theta$ asociado a este parámetro). Se desconoce el valor exacto de este parámetro pero estudios anteriores sugieren la siguiente distribución sobre $\theta$ :
 
