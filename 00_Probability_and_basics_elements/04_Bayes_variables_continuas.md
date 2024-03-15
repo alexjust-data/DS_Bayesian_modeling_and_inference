@@ -131,6 +131,22 @@ $$
 
 <br>
 
+> **nota:**
+> La **regla de Barrow**, también conocida como la **regla del trapecio** o como la **fórmula de integración de Newton-Leibniz**, es una forma de calcular la integral definida de una función. 
+>
+>En este ejemplo, la regla de Barrow se utiliza para encontrar la constante de normalización \( C_2 \). Esta constante es necesaria para asegurarse de que la probabilidad a posteriori se integre a 1 sobre el intervalo de interés, en este caso \([0.3, 0.4]\), lo que la hace una distribución de probabilidad válida. Al calcular \( C_2 \) usando la regla de Barrow, se obtiene el resultado de integrar la función exponencial que aparece en el numerador de la expresión de \( p(\theta | Y = 21.75) \), asegurando así que las probabilidades se comporten según los axiomas de la teoría de la probabilidad.
+>
+>La regla de Barrow nos dice que la integral de una función continua \( f(x) \) entre dos puntos \( a \) y \( b \) puede ser calculada como:
+>
+>$$
+>\int_{a}^{b} f(x) dx = F(b) - F(a)
+>$$
+>
+>donde \( F \) es una antiderivada de \( f \), es decir, una función tal que \( F'(x) = f(x) \).
+>
+>En este caso particular, la regla de Barrow es aplicada a la función exponencial negativa, \( e^{-21.>75\theta} \), que es una función bien comportada y cuya antiderivada se conoce fácilmente. El resultado >de aplicar la regla de Barrow proporciona el valor de la integral, que es la constante \( C_2 \) que >normaliza la distribución a posteriori de \( \theta \) dado el dato \( Y = 21.75 \).
+
+
 Con todo esto, la probabilidad actualizada de $\theta$ en $[0.33,0.37]$ teniendo ahora en consideración la información muestral se obtiene como:
 
 <br>
@@ -141,9 +157,6 @@ $$
 
 <br>
 
-> Regla de Barrow : Establece que el cálculo de una integral definida se puede obtener como la diferencia de una función primitiva evaluada en los límites de integración.
-
-Para evitar el cálculo de las integrales anteriores de forma analítica, en R podemos usar el siguiente código que resuelve las integrales numéricamente. En primera lugar definimos como *posterior* la función en la ecuación sin su constante de integración:
 
 ###### (4)
 
