@@ -26,21 +26,21 @@ En la Sección 1 se habla del uso propio de la probabilidad en el método bayesi
 
 #### Formulario
 
-Teorema de Bayes
-1. [Versión clásica](00_Form/01_Bayes_theorem.md#versión-clásica)
-2. [Teorema de Bayes para variables aleatorias discretas](00_Form/01_Bayes_theorem.md#teorema-de-bayes-para-variables-aleatorias-discretas)
-3. [Teorema de Bayes para variables aleatorias continuas](00_Form/01_Bayes_theorem.md#teorema-de-bayes-para-variables-aleatorias-continuas)
-4. [Versión bayesiana del teorema de Bayes](00_Form/01_Bayes_theorem.md#versión-bayesiana-del-teorema-de-bayes)
+1. Teorema de Bayes
+   1. [Versión clásica](00_Form/01_Bayes_theorem.md#versión-clásica)
+   2. [Teorema de Bayes para variables aleatorias discretas](00_Form/01_Bayes_theorem.md#teorema-de-bayes-para-variables-aleatorias-discretas)
+   3. [Teorema de Bayes para variables aleatorias continuas](00_Form/01_Bayes_theorem.md#teorema-de-bayes-para-variables-aleatorias-continuas)
+   4. [Versión bayesiana del teorema de Bayes](00_Form/01_Bayes_theorem.md#versión-bayesiana-del-teorema-de-bayes)
 
-Distribuciones para variables aleatorias discretas
-1. [Variable aleatoria con distribución Bernoulli/Binomial](00_Form/01_Bayes_theorem.md#variable-aleatoria-con-distribución-bernoullibinomial)
-2. [Variable aleatoria con distribución de Poisson](00_Form/01_Bayes_theorem.md#variable-aleatoria-con-distribución-de-poisson)
+2. Distribuciones para variables aleatorias discretas
+   1. [Variable aleatoria con distribución Bernoulli/Binomial](00_Form/01_Bayes_theorem.md#variable-aleatoria-con-distribución-bernoullibinomial)
+   2. [Variable aleatoria con distribución de Poisson](00_Form/01_Bayes_theorem.md#variable-aleatoria-con-distribución-de-poisson)
 
-Distribuciones para variables aleatorias continuas 
-1. [Variable aleatoria con distribución uniforme](00_Form/01_Bayes_theorem.md#variable-aleatoria-con-distribución-uniforme)
-2. [Variable aleatoria con distribución normal](00_Form/01_Bayes_theorem.md#variable-aleatoria-con-distribución-normal)
-3. [Variable aleatoria con distribución gamma](00_Form/01_Bayes_theorem.md#variable-aleatoria-con-distribución-gamma)
-4. [Variable aleatoria con distribución beta](00_Form/01_Bayes_theorem.md#variable-aleatoria-con-distribución-beta)
-5. [Variable aleatoria con distribución t-Student](00_Form/01_Bayes_theorem.md#variable-aleatoria-con-distribución-t-student)
-6. [Variable aleatoria con distribución ji-cuadrada](00_Form/01_Bayes_theorem.md#variable-aleatoria-con-distribución-ji-cuadrada)
+3. Distribuciones para variables aleatorias continuas 
+   1. [Variable aleatoria con distribución uniforme](00_Form/01_Bayes_theorem.md#variable-aleatoria-con-distribución-uniforme)
+   2. [Variable aleatoria con distribución normal](00_Form/01_Bayes_theorem.md#variable-aleatoria-con-distribución-normal)
+   3. [Variable aleatoria con distribución gamma](00_Form/01_Bayes_theorem.md#variable-aleatoria-con-distribución-gamma)
+   4. [Variable aleatoria con distribución beta](00_Form/01_Bayes_theorem.md#variable-aleatoria-con-distribución-beta)
+   5. [Variable aleatoria con distribución t-Student](00_Form/01_Bayes_theorem.md#variable-aleatoria-con-distribución-t-student)
+   6. [Variable aleatoria con distribución ji-cuadrada](00_Form/01_Bayes_theorem.md#variable-aleatoria-con-distribución-ji-cuadrada)
 

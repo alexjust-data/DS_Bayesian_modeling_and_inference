@@ -36,9 +36,9 @@ La notación se ha adaptado, en parte, a la utilizada en la segunda edición del
 
 <br>
 
-### Teorema de Bayes
+### 1. Teorema de Bayes
 
-#### Versión clásica
+#### 1.1 Versión clásica
 
 Pongamos que los posibles eventos son $A$ y $B$:
 
@@ -54,7 +54,7 @@ $$
 
 <br>
 
-#### Teorema de Bayes para variables aleatorias discretas
+#### 1.2 Teorema de Bayes para variables aleatorias discretas
 
 En variables aleatorias discretas, la función de probabilidad condicional $P(X = x | Y = y)$ es la probabilidad de que $X$ valga $x$ sabiendo que $Y = y$. La función que retorna, para cada valor de $x$ en su rango, la probabilidad $P(X = x | Y = y)$ se llama _distribución condicional de $X$ dado $Y = y$_.
 
@@ -72,7 +72,7 @@ $$
 
 <br>
 
-#### Teorema de Bayes para variables aleatorias continuas
+#### 1.3 Teorema de Bayes para variables aleatorias continuas
 
 El teorema de Bayes en su versión continua establece una fórmula para la distribución condicional:
 
@@ -88,7 +88,7 @@ $$
 
 <br>
 
-#### Versión bayesiana del teorema de Bayes
+#### 1.4 Versión bayesiana del teorema de Bayes
 
 El aspecto particular del método bayesiano es actualizar la información sobre una cantidad desconocida o una vez conocidos los datos. En particular, dado un vector de observaciones $y$, y el objeto matemático que contiene la actualización de la información es la distribución condicional $p(\theta | y)$, conocida como distribución _a posteriori_ y que se obtiene en virtud del teorema de Bayes como:
 
@@ -104,10 +104,10 @@ $$
 
 <br>
 
-### Distribuciones para variables aleatorias discretas
+### 2. Distribuciones para variables aleatorias discretas
 
 
-#### Variable aleatoria con distribución Bernoulli/Binomial
+#### 2.1 Variable aleatoria con distribución Bernoulli/Binomial
 
 **Definición**: una variable aleatoria $X$ sigue una distribución de Bernoulli con parámetro $\pi$ ( $0 \leq \pi \leq 1$ ) y se denota $X \sim \text{bern}(\pi)$ si $X$ solo puede tomar los valores 0 o 1 con probabilidades $P(X = 1) = \pi$ y $P(X = 0) = 1 - \pi$.
 
@@ -137,7 +137,7 @@ Sus momentos son:
 
 <br>
 
-#### Variable aleatoria con distribución de Poisson
+#### 2.2 Variable aleatoria con distribución de Poisson
 
 **Definición**: una variable aleatoria $X$ sigue una distribución de Poisson de parámetro $\lambda$ y se denota $X | \lambda \sim \text{Poisson}(\lambda)$ cuando la probabilidad de $x$ se puede expresar como:
 
@@ -152,9 +152,9 @@ Sus momentos son:
 
 <br>
 
-### Distribuciones para variables aleatorias continuas
+### 3. Distribuciones para variables aleatorias continuas
 
-#### Variable aleatoria con distribución uniforme
+#### 3.1 Variable aleatoria con distribución uniforme
 
 **Definición**: una variable aleatoria $X$ tiene una distribución uniforme en el intervalo $(a,b)$ y se denota $X | (a,b) \sim \text{unif}(a,b)$ si su función de densidad es
 
@@ -169,7 +169,7 @@ Sus momentos son:
 
 <br>
 
-##### Variable aleatoria con distribución normal
+##### 3.2 Variable aleatoria con distribución normal
 
 **Definición**: decimos que una variable aleatoria $X$ tiene una distribución normal de parámetros $\mu$ y $\sigma$ y se denota $X | \mu,\sigma \sim \text{normal}(\mu,\sigma)$ para $-\infty < \mu < \infty$, $\sigma > 0$ si su función de densidad puede expresarse como:
 
@@ -184,7 +184,7 @@ Sus momentos son:
 
 <br>
 
-#### Variable aleatoria con distribución gamma
+#### 3.3 Variable aleatoria con distribución gamma
 
 **Definición**: decimos que una variable $X$ sigue una distribución gamma de parámetros $a > 0$, $b > 0$ y denotamos $X | (a,b) \sim \text{Gamma}(a,b)$ si su función de densidad es
 
@@ -205,7 +205,7 @@ Sus momentos son:
 
 <br>
 
-#### Variable aleatoria con distribución beta
+#### 3.4 Variable aleatoria con distribución beta
 
 **Definición**: una variable aleatoria $X$ tiene una distribución beta con parámetros $a > 0$ y $b > 0$ y se denota $X | (a,b) \sim \text{beta}(a,b)$ si su función de densidad es:
 
@@ -220,7 +220,7 @@ Sus momentos son:
 
 <br>
 
-#### Variable aleatoria con distribución ji-cuadrada
+#### 3.5 Variable aleatoria con distribución ji-cuadrada
 
 **Definición**: una variable aleatoria $X$ sigue una distribución ji-cuadrada con $\nu > 0$ grados de libertad y denotamos $X | \nu \sim \chi^2(\nu)$ si su función de densidad se puede expresar como:
 
@@ -235,7 +235,7 @@ Sus momentos son:
 
 <br>
 
-#### Variable aleatoria con distribución t-Student
+#### 3.6 Variable aleatoria con distribución t-Student
 
 **Definición**: en una variable $T = \frac{Z}{\sqrt{V/\nu}}$, donde $Z \sim \text{normal}(0,1)$ y $V \sim \chi^2(\nu)$, decimos que $T$ sigue una distribución t de Student con $\nu$ grados de libertad y lo denotamos por $T \sim t\text{-Student}(\nu)$. La densidad de esta distribución viene dada por:
 
