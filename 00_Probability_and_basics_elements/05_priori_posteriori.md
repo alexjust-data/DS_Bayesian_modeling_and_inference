@@ -19,7 +19,7 @@ $$
 
 A esta distribución condicional se le llama distribución _a posteriori_ y se corresponde con la actualización de la distribución para $\theta$ incluyendo la información en los datos. Las distribuciones _a posteriori_ de los ejemplos anteriores están en la Tabla [2](03_Bayes_variables_aleatorias_discretas.md#ejemplo-2) en el ejemplo [2](03_Bayes_variables_aleatorias_discretas.md#ejemplo-2) y en la ecuación [4](04_Bayes_variables_continuas.md#4) en el ejemplo [3](04_Bayes_variables_continuas.md#3).
 
-En el mundo bayesiano es bastante común que, en las distribuciones sobre los parámetros, se emplee la letra griega $\pi$ y por tanto se escriba $\pi(\theta)$ (para la distribución _a priori_) y $\pi(\theta | y)$ (distribución _a posteriori_, condicional a $Y = y$). No obstante, aquí optaremos por la notación $p$, para ser consistentes con el resto de los materiales del curso.
+En el mundo bayesiano es bastante común que, en las distribuciones sobre los parámetros, se emplee la letra griega $\pi$ y por tanto se escriba $\pi(\theta)$ (para la distribución _a priori_) y $\pi(\theta | y)$ (distribución _a posteriori_, condicional a $Y = y$). No obstante, aquí optaremos por la notación $p$, para ser consistentes con el resto de los materiales de estos apuntes.
 
 Ya hemos visto que en el manejo de las distribuciones sobre los parámetros es bastante habitual encontrarnos con constantes de proporcionalidad. Las constantes de proporcionalidad están definidas por la obligación de la correspondiente distribución de probabilidad de integrar uno y por tanto su valor está implícitamente determinado por los factores que dependen de $\theta$. Esta observación permite avanzar en los cálculos sin especificar explícitamente su valor haciendo por tanto las matemáticas menos engorrosas. Esto se consigue introduciendo las funciones de probabilidad condicional es el símbolo $\propto$ de "proporcional a" con lo que el teorema de Bayes queda:
 
@@ -107,7 +107,7 @@ $$
 A = \frac{y}{0.01^2} + \frac{\mu_y}{\sigma_y^2}, \quad B = \frac{1}{0.01^2} + \frac{1}{\sigma_y^2}
 $$
 
-En la última expresión de arriba, reconocemos la forma de una densidad normal, en este caso de media \(A/B\) y de varianza \(B^{-1}\). Entonces llegamos a la conclusión de que:
+En la última expresión de arriba, reconocemos la forma de una densidad normal, en este caso de media $A/B$ y de varianza $B^{-1}$. Entonces llegamos a la conclusión de que:
 
 $$
 p(\mu | y) = \text{normal} \left( \mu \bigg| \frac{A}{B}, \frac{1}{B} \right) = \text{normal} \left( \mu \bigg| \frac{\frac{y}{0.01^2} + \frac{\mu_y}{\sigma_y^2}}{\frac{1}{0.01^2} + \frac{1}{\sigma_y^2}}, \frac{1}{\frac{1}{0.01^2} + \frac{1}{\sigma_y^2}} \right)
@@ -123,7 +123,7 @@ $$
 
 >###### Figura 1
 >
->Para el ejemplo [4](05_priori_posteriori.md#ejemplo-4) distribución _a priori_ (línea discontinua) y distribución _a posteriori_ de >$\mu$ (línea continua). En ambos gráficos $\mu_y = 0.1$ y $y = 0.15$ y en el gráfico 
+>Para el ejemplo [4](05_priori_posteriori.md#ejemplo-4) distribución _a priori_ (línea discontinua) y distribución _a posteriori_ de > $\mu$ (línea continua). En ambos gráficos $\mu_y = 0.1$ y $y = 0.15$ y en el gráfico 
 >* a) la desviación típica _a priori_ (nos da una idea de lo seguros que estamos a _priori_ del valor $\mu_y$) es $\sigma_y = 0.>025$, 
 >* mientras que en el gráfico b) $\sigma_y = 0.005$. 
 >
