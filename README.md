@@ -1,6 +1,7 @@
 ### Bayesian statistical analysis
 
-  
+En la Sección 1 se habla del uso propio de la probabilidad en el método bayesiano para formalizar todas las incertidumbres en un problema de inferencia. El resto de las secciones son más generales y describen métodos que son útiles más allá del método bayesiano, pero que son cruciales para el desarrollo de este. Estamos hablando de la construcción de modelos en estadística (y por tanto de la definición de la función de verosimilitud) que estudiaremos en la Sección 2. La Sección 3 está dedicada a la simulación de variables aleatorias y en particular al método de Montecarlo. En la Sección 4 estudiaremos las herramientas que R pone a nuestra disposición para simular variables aleatorias.
+
 #### Métodos y elementos de la inferencia bayesiana
   
 1. [Probabilidad y elementos básicos del método bayesiano](00_methods_and_elements/01_Probabilidad_y_elementos_basicos.md)  
@@ -21,4 +22,4 @@
 1. [Simulación en R](03_Simulation_in_R/01_Simulation_in_R.md)  
 4.1. [Simulación de vectores aleatorios](03_Simulation_in_R/02_Random_Vector_Simulation.md)  
   
-1. [Extra sobre métodos Montecarlo](#)  
+1. [Extra sobre métodos Montecarlo](04_Extra_on_Monte_Carlo_methods/04_Extra_on_Monte_Carlo_methods.md)  
