@@ -123,7 +123,7 @@ $$
 
 >###### Figura 1
 >
->Para el ejemplo [4](05_priori_posteriori.md#ejemplo-4) distribución _a priori_ (línea discontinua) y distribución _a posteriori_ de > $\mu$ (línea continua). En ambos gráficos $\mu_y = 0.1$ y $y = 0.15$ y en el gráfico 
+>Para el ejemplo [4](05_priori_posteriori.md#ejemplo-4) distribución _a priori_ (línea discontinua) y distribución *a posteriori* de > $\mu$ (línea continua). En ambos gráficos $\mu_y = 0.1$ y $y = 0.15$ y en el gráfico 
 >* a) la desviación típica _a priori_ (nos da una idea de lo seguros que estamos a _priori_ del valor $\mu_y$) es $\sigma_y = 0.>025$, 
 >* mientras que en el gráfico b) $\sigma_y = 0.005$. 
 >
