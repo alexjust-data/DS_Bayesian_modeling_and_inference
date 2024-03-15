@@ -1,6 +1,6 @@
 ### variable aleatoria con una distribución exponencial condicionada
 
-La decisión de modelar el tiempo hasta que eclosionan los huevos, $Y$, como una variable aleatoria con una distribución exponencial condicionada a $\theta$, generalmente se basa en las siguientes consideraciones:
+La decisión de modelar el tiempo hasta que eclosionan los huevos, $Y$, como una variable aleatoria con una distribución exponencial condicionada a $\theta$ (medida en gramos de sal por centilitro de agua), generalmente se basa en las siguientes consideraciones:
 
 1. **Propiedad de falta de memoria**: La distribución exponencial tiene la propiedad única de no tener memoria, lo que implica que la probabilidad de eclosión en cualquier momento futuro es la misma, sin importar cuánto tiempo ha pasado ya. Esto puede ser biológicamente plausible si, por ejemplo, cada momento adicional de desarrollo del huevo es independiente de los anteriores.
 
