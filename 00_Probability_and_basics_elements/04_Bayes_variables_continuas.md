@@ -65,6 +65,32 @@ con $C_1 = \log(4/3)$ (que es la constante de proporcionalidad de esta función 
 >
 >Para encontrar el valor de $C_1$, se debe integrar $\frac{1}{\theta}$ desde 0.3 a 0.4 y luego igualar esta integral a 1, resolviendo para $C_1$. Esto es porque la integral de una función de densidad de probabilidad sobre su rango completo debe ser igual a 1 para satisfacer los axiomas de probabilidad.
 >
+>Para normalizar esta función de densidad de probabilidad, necesitamos encontrar la constante de proporcionalidad $C_1$ tal que:
+>
+>$$
+>\int_{0.3}^{0.4} \frac{1}{C_1 \theta} \, d\theta = 1
+>$$
+>
+>Integrando esta expresión, obtenemos:
+>
+>$$
+>\left. \frac{\log(\theta)}{C_1} \right|_{0.3}^{0.4} = 1
+>$$
+>
+>Resolviendo esta ecuación, encontramos:
+>
+>$$
+>\frac{\log(0.4) - \log(0.3)}{C_1} = 1
+>$$
+>
+>Y por lo tanto:
+>
+>$$
+>C_1 = \frac{\log\left(\frac{4}{3}\right)}{\log(0.4) - \log(0.3)}
+>$$
+>
+>Por lo tanto, $C_1 = \log\left(\frac{4}{3}\right)$ es la constante de proporcionalidad necesaria para normalizar la función de densidad de probabilidad $p(\theta)$ en el intervalo dado $[0.3, 0.4]$.
+
 
 De particular interés científico es cuantificar la probabilidad de que la concentración salina esté entre los valores 0.33 y 0.37, que es el intervalo de salinidad media en profundidades no abisales en el océano. Sobre la base de la cuantificación establecida de los posibles valores de $\theta$ según $p(\theta)$ están probabilidad es
 
