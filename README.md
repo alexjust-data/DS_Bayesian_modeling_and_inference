@@ -4,26 +4,26 @@ En la Sección 1 se habla del uso propio de la probabilidad en el método bayesi
 
 #### Métodos y elementos de la inferencia bayesiana
   
-1. [Probabilidad y elementos básicos del método bayesiano](01_section_1/00_methods_and_elements/01_Probabilidad_y_elementos_basicos.md)
-   1.1. [Probabilidad condicional y regla de Bayes](01_section_1/00_methods_and_elements/02_Probabilidad_condicional_y_regla_de_Bayes.md)
-   1.2. [Teorema de Bayes en variables aleatorias discretas](01_section_1/00_Probability_and_basics_elements/03_Bayes_variables_aleatorias_discretas.md)
-   1.3. [Teorema de Bayes en variables aleatorias continuas](01_section_1/00_Probability_and_basics_elements/04_Bayes_variables_continuas.md)
-   1.4 [Priori y posteriori](01_section_1/00_Probability_and_basics_elements/05_priori_posteriori.md)
+1. [Probabilidad y elementos básicos del método bayesiano](01_section_1/00_methods_and_elements/01_Probabilidad_y_elementos_basicos.md)  
+   1.1. [Probabilidad condicional y regla de Bayes](01_section_1/00_methods_and_elements/02_Probabilidad_condicional_y_regla_de_Bayes.md)  
+   1.2. [Teorema de Bayes en variables aleatorias discretas](01_section_1/00_Probability_and_basics_elements/03_Bayes_variables_aleatorias_discretas.md)  
+   1.3. [Teorema de Bayes en variables aleatorias continuas](01_section_1/00_Probability_and_basics_elements/04_Bayes_variables_continuas.md)  
+   1.4 [Priori y posteriori](01_section_1/00_Probability_and_basics_elements/05_priori_posteriori.md)  
 
-1. [Modelización estadística y función de verosimilitud](01_section_1/01_Statistical_modeling_likelihood_function/01_Statical_modeling_likehood_function.md)
-   2.1. [Independencia condicional y observaciones independientes e idénticamente distribuidas](01_section_1/01_Statistical_modeling_likelihood_function/02_Conditional_Independence_and_Independent_Identically_Distributed_Observations.md)
-   2.2. [Observaciones independientes, pero no idénticamente distribuidas](01_section_1/01_Statistical_modeling_likelihood_function/03_Independent_Observations_not_Identically_distributed.md)
-   2.3. [Observaciones no independientes](01_section_1/01_Statistical_modeling_likelihood_function/04_Non_Independent_Observations.md)
+1. [Modelización estadística y función de verosimilitud](01_section_1/01_Statistical_modeling_likelihood_function/01_Statical_modeling_likehood_function.md)  
+   2.1. [Independencia condicional y observaciones independientes e idénticamente distribuidas](01_section_1/01_Statistical_modeling_likelihood_function/02_Conditional_Independence_and_Independent_Identically_Distributed_Observations.md)  
+   2.2. [Observaciones independientes, pero no idénticamente distribuidas](01_section_1/01_Statistical_modeling_likelihood_function/03_Independent_Observations_not_Identically_distributed.md)  
+   2.3. [Observaciones no independientes](01_section_1/01_Statistical_modeling_likelihood_function/04_Non_Independent_Observations.md)  
 
-1. [Técnicas básicas de simulación de variables aleatorias](01_section_1/02_random_variable_simulation_techniques/01_random_variable_simulation_techniques.md)
-   3.1. [La transformada integral de probabilidad](01_section_1/02_random_variable_simulation_techniques/02_integral_probability_transform.md)
-   3.2. [Simulación y métodos Montecarlo como herramienta numérica para describir una distribución](01_section_1/02_random_variable_simulation_techniques/03_simulation_and_monte_carlo_methods.md)
-   3.3. [Simulación en el contexto bayesiano](01_section_1/02_random_variable_simulation_techniques/04_Simulation_in_the_Bayesian_context.md)
+1. [Técnicas básicas de simulación de variables aleatorias](01_section_1/02_random_variable_simulation_techniques/01_random_variable_simulation_techniques.md)  
+   3.1. [La transformada integral de probabilidad](01_section_1/02_random_variable_simulation_techniques/02_integral_probability_transform.md)  
+   3.2. [Simulación y métodos Montecarlo como herramienta numérica para describir una distribución](01_section_1/02_random_variable_simulation_techniques/03_simulation_and_monte_carlo_methods.md)  
+   3.3. [Simulación en el contexto bayesiano](01_section_1/02_random_variable_simulation_techniques/04_Simulation_in_the_Bayesian_context.md)  
 
-1. [Simulación en R](01_section_1/03_Simulation_in_R/01_Simulation_in_R.md)
-   4.1. [Simulación de vectores aleatorios](01_section_1/03_Simulation_in_R/02_Random_Vector_Simulation.md)
+1. [Simulación en R](01_section_1/03_Simulation_in_R/01_Simulation_in_R.md)  
+   4.1. [Simulación de vectores aleatorios](01_section_1/03_Simulation_in_R/02_Random_Vector_Simulation.md)  
 
-1. [Extra sobre métodos Montecarlo](01_section_1/04_Extra_on_Monte_Carlo_methods/04_Extra_on_Monte_Carlo_methods.md)
+1. [Extra sobre métodos Montecarlo](01_section_1/04_Extra_on_Monte_Carlo_methods/04_Extra_on_Monte_Carlo_methods.md)  
 
 
 
