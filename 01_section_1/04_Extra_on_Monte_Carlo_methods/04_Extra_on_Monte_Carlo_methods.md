@@ -37,4 +37,4 @@ La ley de los grandes números nos asegura que, si $N$ es lo suficientemente gra
 > ##### Figura 7 
 > Aproximación al número $\pi$ mediante métodos Montecarlo
 
-![](../img/9.png)
+![](../../img/9.png)

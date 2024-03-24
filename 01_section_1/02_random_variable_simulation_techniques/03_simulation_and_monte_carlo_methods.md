@@ -1,12 +1,10 @@
 ### Simulación y métodos Montecarlo como herramienta numérica para describir una distribución
 
+Cuando hablamos de métodos Montecarlo simplemente nos estamos refiriendo al hecho de usar números aleatorios para aproximar alguna cantidad desconocida. Estos números aleatorios pueden haberse obtenido mediante observación (de una muestra obtenida al azar) o mediante la utilización de números (pseudo)aleatorios obtenidos, por ejemplo, con la `transformada integral de probabilidad`.
 
-Copy code
-Cuando hablamos de métodos Montecarlo simplemente nos estamos refiriendo al hecho de usar números aleatorios para aproximar alguna cantidad desconocida. Estos números aleatorios pueden haberse obtenido mediante observación (de una muestra obtenida al azar) o mediante la utilización de números (pseudo)aleatorios obtenidos, por ejemplo, con la transformada integral de probabilidad.
+En concreto, entre las cantidades desconocidas que se pueden aproximar se encuentran aquellas que nos permiten describir una distribución de probabilidad. Ya sabemos que existen medidas resumen de las distribuciones de probabilidad que nos permiten conocer aspectos básicos de las variables aleatorias que siguen estas distribuciones. Estamos pensando en la esperanza o media de $Y$, la varianza, la mediana, el primer cuartil, o probabilidades de eventos de interés.
 
-En concreto, entre las cantidades desconocidas que se pueden aproximar se encuentran aquellas que nos permiten describir una distribución de probabilidad. Ya sabemos de cursos anteriores que existen medidas resumen de las distribuciones de probabilidad que nos permiten conocer aspectos básicos de las variables aleatorias que siguen estas distribuciones. Estamos pensando en la esperanza o media de $Y$, la varianza, la mediana, el primer cuartil, o probabilidades de eventos de interés.
-
-Todas las medidas resumen de una distribución se obtienen aplicando distintas operaciones sobre la distribución de probabilidad de $Y$. Si por ejemplo $Y$ es una variable continua, la esperanza de $Y$ es la integral:
+Todas las medidas resumen de una distribución se obtienen aplicando distintas operaciones sobre la distribución de probabilidad de $Y$. Si por ejemplo $Y$ es una variable continua (que pueden asumir cualquier valor en un rango, incluyendo fracciones y números decimales.), la esperanza de $Y$ es la integral:
 
 $$
 E(Y) = \int_{-\infty}^{\infty} y p(y) dy.
@@ -25,7 +23,11 @@ $$
 $$
 
 
-y así con cualquier otra medida descriptiva de $p(y)$ (lo que a veces se llama medidas poblacionales, entendiendo por “población” el modelo probabilístico $p(y)$). En resumen, para determinar estas características, hay que realizar operaciones matemáticas que a veces pueden ser complejas. Es en este punto en el que la simulación puede sernos de mucha utilidad como un método numérico sencillo de aproximar estas operaciones. El principio en el que está basada esta aproximación es básico en estadística: cualquier magnitud poblacional puede aproximarse utilizando una muestra suficientemente grande de la población. Entonces, para aproximar la $E(Y)$ a partir de una simulación
+y así con cualquier otra medida descriptiva de $p(y)$ (lo que a veces se llama medidas poblacionales, entendiendo por “población” el modelo probabilístico $p(y)$). En resumen, para determinar estas características, hay que realizar operaciones matemáticas que a veces pueden ser complejas. Es en este punto en el que la simulación puede sernos de mucha utilidad como un método numérico sencillo de aproximar estas operaciones. El principio en el que está basada esta aproximación es básico en estadística: 
+
+>cualquier magnitud poblacional puede aproximarse utilizando una muestra suficientemente grande de la población. 
+
+Entonces, para aproximar la $E(Y)$ a partir de una simulación
 
 $Y_1,Y_2,\ldots,Y_N$,
 
