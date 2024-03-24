@@ -18,20 +18,13 @@ es una muestra simulada $Y \sim p(Y)$.
 
 > **La transformada integral de probabilidad y la simulación de precios de acciones**
 >
->El método general para la simulación de variables aleatorias a partir de simulaciones de uniformes en el intervalo (0,1) (esto significa que cualquier número entre 0 y 1 tiene la misma probabilidad de ser seleccionado. ) se basa en un resultado conocido como el teorema de la transformada integral de la probabilidad. Este teorema involucra la función de distribución acumulada, que para una variable continua se obtiene integrando la función de densidad $p(y)$:
->
->$$
->F(y) = \int_{-\infty}^{y} p(t) dt.
->$$
->
->
->El teorema establece que si $Y$ es una variable aleatoria con una función de distribución acumulada $F$, entonces la variable aleatoria $Z = F(Y)$ se distribuye uniformemente, $Z \sim \text{unif}(0,1)$. Interesantemente, el teorema también tiene una aplicación inversa: si $Z$ es una variable aleatoria que se distribuye uniformemente, entonces la variable aleatoria definida por $Y = F^{-1}(Z)$ tendrá la distribución original de $Y$, es decir, $Y \sim p(Y)$.
->
 >Supongamos que queremos simular posibles precios futuros de una acción, y la variable aleatoria $Y$ representa el precio de esta acción. Si asumimos que los precios siguen una distribución log-normal, la función de densidad de probabilidad $p(y)$ sería:
 >
 >$$
 >p(y) = \frac{1}{y \sigma \sqrt{2\pi}} e^{-\frac{(\ln y - \mu)^2}{2\sigma^2}}
 >$$
+>
+> ![](/img/12.png)
 >
 >Para simular el precio de la acción:
 >
@@ -40,6 +33,19 @@ es una muestra simulada $Y \sim p(Y)$.
 >3. Los valores resultantes $Y_1 = F^{-1}(z_1), Y_2 = F^{-1}(z_2), ..., Y_n = F^{-1}(z_n)$ representarán una muestra simulada de los precios futuros de la acción.
 >
 >Esto nos permite simular escenarios de precios que se derivan de un modelo estadístico, en lugar de simplemente inventar números sin fundamentos.
+>
+>La razón por la que el precio de una acción a veces se modela como log-normal se debe a las propiedades inherentes de los precios de las acciones y a cómo estos se comportan en el tiempo. Vamos a desglosarlo para entenderlo mejor:
+>
+>* Multiplicatividad: Los precios de las acciones no siguen una ruta aditiva (donde se suman o restan cantidades fijas) sino una multiplicativa. Esto significa que el precio cambia por un factor (por ejemplo, aumenta un 10% o disminuye un 5%) en lugar de por una cantidad fija (aumenta 1€ o disminuye 1€). La distribución log-normal es adecuada para modelar este comportamiento porque se basa en el producto de muchas variables aleatorias pequeñas e independientes, lo que se asemeja a los retornos porcentuales de una acción a lo largo del tiempo.
+>* Limitación de valores negativos: Dado que el precio de una acción no puede ser negativo, un modelo que permita valores negativos no sería adecuado. La distribución log-normal se define solo para valores positivos, lo que la hace apropiada para modelar precios de acciones.
+>* Asimetría: Los precios de las acciones tienen distribuciones asimétricas; es decir, tienen una cola larga hacia la derecha. Esto se debe a que, teóricamente, el precio de una acción puede aumentar sin límite, pero no puede caer por debajo de cero. La distribución log-normal captura esta asimetría.
+Sin embargo, la modelización de precios de acciones es compleja y, aunque la distribución log-normal es útil, existen varias limitaciones y suposiciones. En la realidad, los movimientos de los precios de las acciones pueden ser afectados por eventos imprevistos, volatilidad, y otros factores que no se ajustan perfectamente a una distribución log-normal.
+>
+>Por estas razones, los financieros y economistas también exploran otros modelos y distribuciones, como:
+>
+>* Modelos GARCH (Generalized Autoregressive Conditional Heteroskedasticity): Estos modelos son útiles para modelar la volatilidad de los precios de las acciones, que puede cambiar con el tiempo.
+>* Distribución de Pareto (Ley de Potencia): Para modelar las colas pesadas y eventos extremos ("black swans") en los datos financieros.
+>* Distribución de T de Student: Para cuando los datos tienen colas más pesadas de lo que puede capturar la distribución normal, lo que puede ser útil para modelar retornos financieros que experimentan eventos extremos con mayor frecuencia de lo que predicen las distribuciones normales o log-normales.
 
 Practiquemos este método en un caso concreto. Supongamos que queremos simular una variable aleatoria continua $Y$ con función de densidad:
 
@@ -51,6 +57,8 @@ p(y) = \begin{cases}
 0 & \text{en el resto}
 \end{cases}
 $$
+
+![](/img/13.png)
 
 Para aplicar la transformada integral de probabilidad necesitamos la función de distribución:
 
@@ -88,7 +96,7 @@ el gráfico producido lo hemos incluido en la Figura [4]().
 > Histograma de la muestra simulada de tamaño $N = 500$ de una variable aleatoria con función de densidad $p(y)$ expresada en la ecuación 8. Este histograma es una aproximación numérica a la distribución de probabilidad $p(y)$ que observamos se concentra fuertemente en valores pequeños de y (que necesariamente son $y > 1$), pero que se caracteriza por tener una cola derecha de probabilidad bastante pesada ya que podemos encontrar valores muy grandes
 
 
-![](../img/6.png)
+![](../../img/6.png)
 
 Como hemos visto, la aplicación de este método requiere disponer de una expresión explícita de la función de densidad (no vale conocerla a excepción de constante, es decir, con el símbolo de $\infty$) y de ser capaces de obtener la función de distribución (y por tanto operar con una integral que puede ser más o menos compleja).
 
