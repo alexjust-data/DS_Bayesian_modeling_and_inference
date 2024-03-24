@@ -2,21 +2,20 @@
 1. Teorema de Bayes
    1. [Versión clásica](00_Form/01_Bayes_theorem.md#11-versión-clásica)
    2. [Teorema de Bayes para variables aleatorias discretas](https://github.com/alexjust-data/DS_Bayesian_modeling_and_inference/blob/main/00_Form/01_Bayes_theorem.md#12-teorema-de-bayes-para-variables-aleatorias-discretas)
-
-   3. [Teorema de Bayes para variables aleatorias continuas](00_Form/01_Bayes_theorem.md#13-teorema-de-bayes-para-variables-aleatorias-continuas)
-   4. [Versión bayesiana del teorema de Bayes](00_Form/01_Bayes_theorem.md#14-versión-bayesiana-del-teorema-de-bayes)
+   3. [Teorema de Bayes para variables aleatorias continuas]([00_Form/01_Bayes_theorem.md#13-teorema-de-bayes-para-variables-aleatorias-continuas](https://github.com/alexjust-data/DS_Bayesian_modeling_and_inference/blob/main/00_Form/01_Bayes_theorem.md#13-teorema-de-bayes-para-variables-aleatorias-continuas))
+   4. [Versión bayesiana del teorema de Bayes]([00_Form/01_Bayes_theorem.md#14-versión-bayesiana-del-teorema-de-bayes](https://github.com/alexjust-data/DS_Bayesian_modeling_and_inference/blob/main/00_Form/01_Bayes_theorem.md#14-versi%C3%B3n-bayesiana-del-teorema-de-bayes))
 
 2. Distribuciones para variables aleatorias discretas
-   1. [Variable aleatoria con distribución Bernoulli/Binomial](00_Form/01_Bayes_theorem.md#21-variable-aleatoria-con-distribución-bernoullibinomial)
-   2. [Variable aleatoria con distribución de Poisson](00_Form/01_Bayes_theorem.md#22-variable-aleatoria-con-distribución-de-poisson)
+   1. [Variable aleatoria con distribución Bernoulli/Binomial]([00_Form/01_Bayes_theorem.md#21-variable-aleatoria-con-distribución-bernoullibinomial](https://github.com/alexjust-data/DS_Bayesian_modeling_and_inference/blob/main/00_Form/01_Bayes_theorem.md#21-variable-aleatoria-con-distribuci%C3%B3n-bernoullibinomial))
+   2. [Variable aleatoria con distribución de Poisson]([00_Form/01_Bayes_theorem.md#22-variable-aleatoria-con-distribución-de-poisson](https://github.com/alexjust-data/DS_Bayesian_modeling_and_inference/blob/main/00_Form/01_Bayes_theorem.md#22-variable-aleatoria-con-distribuci%C3%B3n-de-poisson))
 
 3. Distribuciones para variables aleatorias continuas 
-   1. [Variable aleatoria con distribución uniforme](00_Form/01_Bayes_theorem.md#31-variable-aleatoria-con-distribución-uniforme)
-   2. [Variable aleatoria con distribución normal](00_Form/01_Bayes_theorem.md#32-variable-aleatoria-con-distribución-normal)
-   3. [Variable aleatoria con distribución gamma](00_Form/01_Bayes_theorem.md#33-variable-aleatoria-con-distribución-gamma)
-   4. [Variable aleatoria con distribución beta](00_Form/01_Bayes_theorem.md#34-variable-aleatoria-con-distribución-beta)
-   5. [Variable aleatoria con distribución t-Student](00_Form/01_Bayes_theorem.md#35-variable-aleatoria-con-distribución-t-student)
-   6. [Variable aleatoria con distribución ji-cuadrada](00_Form/01_Bayes_theorem.md#36-variable-aleatoria-con-distribución-ji-cuadrada)
+   1. [Variable aleatoria con distribución uniforme]([00_Form/01_Bayes_theorem.md#31-variable-aleatoria-con-distribución-uniforme](https://github.com/alexjust-data/DS_Bayesian_modeling_and_inference/blob/main/00_Form/01_Bayes_theorem.md#31-variable-aleatoria-con-distribuci%C3%B3n-uniforme))
+   2. [Variable aleatoria con distribución normal]([00_Form/01_Bayes_theorem.md#32-variable-aleatoria-con-distribución-normal](https://github.com/alexjust-data/DS_Bayesian_modeling_and_inference/blob/main/00_Form/01_Bayes_theorem.md#32-variable-aleatoria-con-distribuci%C3%B3n-normal))
+   3. [Variable aleatoria con distribución gamma]([00_Form/01_Bayes_theorem.md#33-variable-aleatoria-con-distribución-gamma](https://github.com/alexjust-data/DS_Bayesian_modeling_and_inference/blob/main/00_Form/01_Bayes_theorem.md#33-variable-aleatoria-con-distribuci%C3%B3n-gamma))
+   4. [Variable aleatoria con distribución beta]([00_Form/01_Bayes_theorem.md#34-variable-aleatoria-con-distribución-beta](https://github.com/alexjust-data/DS_Bayesian_modeling_and_inference/blob/main/00_Form/01_Bayes_theorem.md#34-variable-aleatoria-con-distribuci%C3%B3n-beta))
+   5. [Variable aleatoria con distribución t-Student]([00_Form/01_Bayes_theorem.md#35-variable-aleatoria-con-distribución-t-student](https://github.com/alexjust-data/DS_Bayesian_modeling_and_inference/blob/main/00_Form/01_Bayes_theorem.md#35-variable-aleatoria-con-distribuci%C3%B3n-ji-cuadrada))
+   6. [Variable aleatoria con distribución ji-cuadrada]([00_Form/01_Bayes_theorem.md#36-variable-aleatoria-con-distribución-ji-cuadrada](https://github.com/alexjust-data/DS_Bayesian_modeling_and_inference/blob/main/00_Form/01_Bayes_theorem.md#36-variable-aleatoria-con-distribuci%C3%B3n-t-student))
 
 ### Formulario
 
