@@ -1,5 +1,7 @@
 ### La transformada integral de probabilidad
 
+![](/img/10.png)
+
 El método general para la simulación de variables aleatorias a partir de simulaciones de uniformes en el intervalo (0,1) se basa en un resultado conocido como el teorema de la transformada integral de la probabilidad. En dicho resultado interviene la función de distribución o función acumulada de probabilidad, que (en el caso de una variable continua) se obtiene a partir de la función de densidad p(y) integrando:
 
 $$F(y) = \int_{-\infty}^{y} p(t) dt.$$
@@ -38,8 +40,6 @@ es una muestra simulada $Y \sim p(Y)$.
 >3. Los valores resultantes $Y_1 = F^{-1}(z_1), Y_2 = F^{-1}(z_2), ..., Y_n = F^{-1}(z_n)$ representarán una muestra simulada de los precios futuros de la acción.
 >
 >Esto nos permite simular escenarios de precios que se derivan de un modelo estadístico, en lugar de simplemente inventar números sin fundamentos.
-
-![](/img/10.png)
 
 Practiquemos este método en un caso concreto. Supongamos que queremos simular una variable aleatoria continua $Y$ con función de densidad:
 
