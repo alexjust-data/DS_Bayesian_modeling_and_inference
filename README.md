@@ -28,7 +28,7 @@ En la Sección 1 se habla del uso propio de la probabilidad en el método bayesi
 #### Formulario
 
 1. Teorema de Bayes
-   1. [Versión clásica](00_Form/01_Bayes_theorem.md#11-versión-clásica)
+   1. [Versión clásica]([00_Form/01_Bayes_theorem.md#11-versión-clásica](https://github.com/alexjust-data/DS_Bayesian_modeling_and_inference/blob/main/00_Form/01_Bayes_theorem.md#11-versi%C3%B3n-cl%C3%A1sica))
    2. [Teorema de Bayes para variables aleatorias discretas](https://github.com/alexjust-data/DS_Bayesian_modeling_and_inference/blob/main/00_Form/01_Bayes_theorem.md#12-teorema-de-bayes-para-variables-aleatorias-discretas)
    3. [Teorema de Bayes para variables aleatorias continuas]([00_Form/01_Bayes_theorem.md#13-teorema-de-bayes-para-variables-aleatorias-continuas](https://github.com/alexjust-data/DS_Bayesian_modeling_and_inference/blob/main/00_Form/01_Bayes_theorem.md#13-teorema-de-bayes-para-variables-aleatorias-continuas))
    4. [Versión bayesiana del teorema de Bayes]([00_Form/01_Bayes_theorem.md#14-versión-bayesiana-del-teorema-de-bayes](https://github.com/alexjust-data/DS_Bayesian_modeling_and_inference/blob/main/00_Form/01_Bayes_theorem.md#14-versi%C3%B3n-bayesiana-del-teorema-de-bayes))
