@@ -1,6 +1,6 @@
 ### La transformada integral de probabilidad
 
-![](/img/10.png)
+![](/img/11.png)
 
 El método general para la simulación de variables aleatorias a partir de simulaciones de uniformes en el intervalo (0,1) se basa en un resultado conocido como el teorema de la transformada integral de la probabilidad. En dicho resultado interviene la función de distribución o función acumulada de probabilidad, que (en el caso de una variable continua) se obtiene a partir de la función de densidad p(y) integrando:
 
