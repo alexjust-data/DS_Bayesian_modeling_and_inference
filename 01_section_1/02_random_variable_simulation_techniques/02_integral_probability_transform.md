@@ -21,7 +21,7 @@ es una muestra simulada $Y \sim p(Y)$.
 >$$
 >F(y) = \int_{-\infty}^{y} p(t) dt.
 >$$
-> ![](/img/10.png)
+>
 >
 >El teorema establece que si $Y$ es una variable aleatoria con una función de distribución acumulada $F$, entonces la variable aleatoria $Z = F(Y)$ se distribuye uniformemente, $Z \sim \text{unif}(0,1)$. Interesantemente, el teorema también tiene una aplicación inversa: si $Z$ es una variable aleatoria que se distribuye uniformemente, entonces la variable aleatoria definida por $Y = F^{-1}(Z)$ tendrá la distribución original de $Y$, es decir, $Y \sim p(Y)$.
 >
@@ -39,6 +39,7 @@ es una muestra simulada $Y \sim p(Y)$.
 >
 >Esto nos permite simular escenarios de precios que se derivan de un modelo estadístico, en lugar de simplemente inventar números sin fundamentos.
 
+![](/img/10.png)
 
 Practiquemos este método en un caso concreto. Supongamos que queremos simular una variable aleatoria continua $Y$ con función de densidad:
 
