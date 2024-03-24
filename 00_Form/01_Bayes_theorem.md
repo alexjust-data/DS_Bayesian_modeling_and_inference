@@ -1,7 +1,8 @@
 
 1. Teorema de Bayes
    1. [Versión clásica](00_Form/01_Bayes_theorem.md#11-versión-clásica)
-   2. [Teorema de Bayes para variables aleatorias discretas](00_Form/01_Bayes_theorem.md#12-teorema-de-bayes-para-variables-aleatorias-discretas)
+   2. [Teorema de Bayes para variables aleatorias discretas](https://github.com/alexjust-data/DS_Bayesian_modeling_and_inference/blob/main/00_Form/01_Bayes_theorem.md#12-teorema-de-bayes-para-variables-aleatorias-discretas)
+
    3. [Teorema de Bayes para variables aleatorias continuas](00_Form/01_Bayes_theorem.md#13-teorema-de-bayes-para-variables-aleatorias-continuas)
    4. [Versión bayesiana del teorema de Bayes](00_Form/01_Bayes_theorem.md#14-versión-bayesiana-del-teorema-de-bayes)
 
