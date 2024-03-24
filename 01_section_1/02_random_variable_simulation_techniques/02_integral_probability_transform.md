@@ -16,11 +16,12 @@ es una muestra simulada $Y \sim p(Y)$.
 
 > **La transformada integral de probabilidad y la simulación de precios de acciones**
 >
->El método general para la simulación de variables aleatorias a partir de simulaciones de uniformes en el intervalo (0,1) se basa en un resultado conocido como el teorema de la transformada integral de la probabilidad. Este teorema involucra la función de distribución acumulada, que para una variable continua se obtiene integrando la función de densidad $p(y)$:
+>El método general para la simulación de variables aleatorias a partir de simulaciones de uniformes en el intervalo (0,1) (esto significa que cualquier número entre 0 y 1 tiene la misma probabilidad de ser seleccionado. ) se basa en un resultado conocido como el teorema de la transformada integral de la probabilidad. Este teorema involucra la función de distribución acumulada, que para una variable continua se obtiene integrando la función de densidad $p(y)$:
 >
 >$$
 >F(y) = \int_{-\infty}^{y} p(t) dt.
 >$$
+> ![](/img/10.png)
 >
 >El teorema establece que si $Y$ es una variable aleatoria con una función de distribución acumulada $F$, entonces la variable aleatoria $Z = F(Y)$ se distribuye uniformemente, $Z \sim \text{unif}(0,1)$. Interesantemente, el teorema también tiene una aplicación inversa: si $Z$ es una variable aleatoria que se distribuye uniformemente, entonces la variable aleatoria definida por $Y = F^{-1}(Z)$ tendrá la distribución original de $Y$, es decir, $Y \sim p(Y)$.
 >
