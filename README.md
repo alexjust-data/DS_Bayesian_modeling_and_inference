@@ -30,9 +30,8 @@ Sección 4, estudiaremos las herramientas que R pone a nuestra disposición para
    4.1. [Simulación de vectores aleatorios](01_section_1/03_Simulation_in_R/02_Random_Vector_Simulation.md)  
 5. [Extra sobre métodos Montecarlo](01_section_1/04_Extra_on_Monte_Carlo_methods/04_Extra_on_Monte_Carlo_methods.md)  
 
-<br>
 
-#### Formulas
+### Formulas
 
 1. Teorema de Bayes
    1. [Versión clásica](00_Form/01_Bayes_theorem.md#11-versi%C3%B3n-cl%C3%A1sica)
