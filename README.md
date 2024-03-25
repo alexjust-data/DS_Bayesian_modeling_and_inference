@@ -28,8 +28,6 @@ Sección 4, estudiaremos las herramientas que R pone a nuestra disposición para
 
 4. [Simulación en R](01_section_1/03_Simulation_in_R/01_Simulation_in_R.md)  
    4.1. [Simulación de vectores aleatorios](01_section_1/03_Simulation_in_R/02_Random_Vector_Simulation.md)  
-<br>
-
 5. [Extra sobre métodos Montecarlo](01_section_1/04_Extra_on_Monte_Carlo_methods/04_Extra_on_Monte_Carlo_methods.md)  
 
 <br>
