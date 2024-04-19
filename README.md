@@ -34,7 +34,7 @@
 
 Este apartado se subraya la importancia de la selección cuidadosa de la distribución a priori para facilitar el cálculo de la distribución a posteriori y cómo la elección de una distribución `conjugada previa` puede simplificar este proceso.
 
-5. [Intro]()
+5. [Intro](02_/intro.md)
 
 
 ##### Previas conjugadas
