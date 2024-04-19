@@ -33,7 +33,10 @@ $$
 p(\theta | y) \propto L(\theta,y)p(\theta).
 $$
 
-En la anterior ecuación "la distribución _a posteriori_ es proporcional al producto de la verosimilitud y la distribución _a priori_" es, de alguna forma, la _piedra filosofal_ de la aproximación bayesiana.
+En la anterior ecuación :
+> la distribución _a posteriori_ es proporcional al producto de la verosimilitud y la distribución _a priori_
+
+es, de alguna forma, la _piedra filosofal_ de la aproximación bayesiana.
 
 Mantener los cálculos al nivel de "proporcional a" es incluso muy útil en la distribución _a priori_, ya que la constante de integración de la distribución _a priori_ "desaparece" en la distribución _a posteriori_. Quizás pasó desapercibido, pero ya hemos visto esta desaparición en el ejemplo [3](04_Bayes_variables_continuas.md#3) observa que en el hilo de ecuaciones en [4](04_Bayes_variables_continuas.md#4) la constante de proporcionalidad de la distribución _a priori_, $C_1$, cancela en el numerador y el denominador.
 
@@ -69,7 +72,6 @@ $$
 p(Y | \mu) = \text{normal}(Y | \mu, 0.01).
 $$
 
----
 
 Este es el “modelo” observacional asumido que conecta el experimento con el parámetro desconocido $\mu$ que define la función de verosimilitud:
 

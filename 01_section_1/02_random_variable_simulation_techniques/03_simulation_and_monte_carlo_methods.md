@@ -23,7 +23,7 @@ $$
 $$
 
 
-y así con cualquier otra medida descriptiva de $p(y)$ (lo que a veces se llama medidas poblacionales, entendiendo por “población” el modelo probabilístico $p(y)$). En resumen, para determinar estas características, hay que realizar operaciones matemáticas que a veces pueden ser complejas. Es en este punto en el que la simulación puede sernos de mucha utilidad como un método numérico sencillo de aproximar estas operaciones. El principio en el que está basada esta aproximación es básico en estadística: 
+y así con cualquier otra medida descriptiva de $p(y)$ (lo que a veces se llama medidas poblacionales, entendiendo por “población” el modelo probabilístico $p(y)$ ). En resumen, para determinar estas características, hay que realizar operaciones matemáticas que a veces pueden ser complejas. Es en este punto en el que la simulación puede sernos de mucha utilidad como un método numérico sencillo de aproximar estas operaciones. El principio en el que está basada esta aproximación es básico en estadística: 
 
 >cualquier magnitud poblacional puede aproximarse utilizando una muestra suficientemente grande de la población. 
 
