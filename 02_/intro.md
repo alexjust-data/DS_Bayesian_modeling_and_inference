@@ -12,4 +12,11 @@ El desafío con la distribución a priori es seleccionar una que permita calcula
 
 La solución a este desafío es el uso de `distribuciones conjugadas previas`. Al utilizar una distribución a priori que es conjugada de la verosimilitud del modelo, se asegura que la distribución a posteriori pertenezca a la misma familia de la distribución a priori, simplificando el cálculo.
 
-Por ejemplo, si la verosimilitud es binomial, la distribución beta es una elección a priori conveniente, ya que es la conjugada de la binomial. Así, al combinar estas dos, la distribución a posteriori también será una beta, lo cual facilita la actualización de las creencias tras observar los datos.
+Por ejemplo, 
+
+- Cuando la **verosimilitud es Binomial**, una opción natural para la distribución a priori es la **distribución Beta**. La razón es que la Beta es conjugada de la verosimilitud Binomial, lo que significa que la **distribución a posteriori** resultante también será una distribución Beta. Esto es beneficioso porque:
+
+  - **Simplifica los Cálculos**: No hay necesidad de resolver integrales complejas para encontrar la distribución a posteriori.
+  - **Facilita la Actualización**: Cuando obtenemos nuevos datos, podemos actualizar nuestra distribución a posteriori simplemente ajustando los parámetros de la Beta, sin tener que recalcular toda la distribución desde cero.
+
+Por ejemplo, si empezamos con una distribución a priori `Beta(α, β)` y observamos `z` éxitos en `N` ensayos, la distribución a posteriori será `Beta(α + z, β + N - z)`. Esto permite una actualización directa y sencilla de nuestras creencias después de considerar los nuevos datos.
