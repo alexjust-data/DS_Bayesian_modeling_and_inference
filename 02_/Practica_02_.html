@@ -1650,9 +1650,7 @@ gamma-Poisson</a></li>
 <p>WhatsApp es una de las aplicaciones de mensajería instantánea más
 utilizadas y fue creada por Jan Koum y Brian Acton. Esta aplicación
 permite comunicarnos con cualquier persona desde cualquier lugar del
-mundo y de forma inmediata. A día de hoy, ¿quién no conoce WhatsApp? El
-uso de WhatsApp, junto con otras redes sociales, se está popularizando
-cada vez más entre los jóvenes de entre diez y catorce años.</p>
+mundo y de forma inmediata.</p>
 <p>En este caso práctico, intentaremos estimar el número de mensajes de
 WhatsApp que recibe un adolescente durante una hora en un día no
 lectivo. Para ello, se preguntó a veinticinco adolescentes sobre el
@@ -1742,13 +1740,37 @@ ggplot(data = data_vero) +
 <p>Ya tenemos cubierto uno de los elementos necesarios para hacer
 inferencia en el contexto bayesiano, la <strong>verosimilitud</strong>.
 Es el momento de definir la distribución a priori.</p>
+<p>Interpretación de la Gráfica:</p>
+<p>La gráfica representa la función de verosimilitud para un parámetro
+<span class="math inline">\(\lambda\)</span> de una distribución de
+Poisson, basándose en un conjunto de datos de conteo.</p>
+<ul>
+<li>El <strong>eje horizontal</strong> <span class="math inline">\(\lambda\)</span> representa distintos valores para
+la tasa promedio de mensajes por hora.</li>
+<li>El <strong>eje vertical</strong> muestra la verosimilitud <span class="math inline">\(f(\lambda)\)</span> asociada a cada valor de <span class="math inline">\(\lambda\)</span>.</li>
+<li>El <strong>pico</strong> de la curva señala el valor de <span class="math inline">\(\lambda\)</span> con la máxima verosimilitud,
+sugiriendo ser el valor más plausible dado los datos.</li>
+<li>No es una distribución de probabilidad en sí misma, ya que el área
+debajo de la curva no tiene por qué sumar uno.</li>
+</ul>
 </div>
 <div id="distribución-a-priori-gamma" class="section level2">
 <h2>Distribución a priori: gamma</h2>
 <p>Sabemos que <span class="math inline">\(\lambda\)</span> es un
-parámetro que toma valores en el intervalo <span class="math inline">\((0, \infty)\)</span>, y dado que la distribución
+parámetro que toma valores en el intervalo <span class="math inline">\((0, \infty)\)</span> (por definición, una tasa no
+puede ser negativa, ya que no tendría sentido hablar de una cantidad
+negativa de eventos ocurriendo), y dado que la distribución
 <strong>gamma</strong> es su distribución a priori conjugada, la
 utilizaremos para asignar información previa sobre el parámetro <span class="math inline">\(\lambda\)</span>.</p>
+<blockquote>
+<p>La distribución gamma es la distribución a priori conjugada de la
+distribución de Poisson por una razón matemática muy conveniente: cuando
+se combina la función de verosimilitud de Poisson con la función de
+densidad previa de la distribución gamma, el resultado, que es la
+distribución a posteriori, también es una distribución gamma. Esto
+sucede gracias a cómo las ecuaciones se alinean y simplifican bajo el
+cálculo bayesiano.</p>
+</blockquote>
 <p>Así, consideramos la distribución a priori <span class="math inline">\(\lambda \sim \text{gamma}(a, b)\)</span>, con
 función de densidad: <span class="math display">\[\pi(\lambda\mid a,
 b)=\lambda e^{-b \lambda} \frac{(b\lambda)^a}{\Gamma(a)}
