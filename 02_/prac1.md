@@ -2,7 +2,7 @@ La elección de una distribución de Poisson para modelar el número de mensajes
 
 - **Eventos Raros o Poco Frecuentes**: La Poisson es adecuada cuando contamos eventos que son relativamente raros en un intervalo fijo.
 - **Eventos Independientes**: Es apropiada cuando los eventos ocurren de forma independiente y la probabilidad de un evento es constante a lo largo del tiempo.
-- **Promedio Conocido**: La Poisson utiliza un parámetro \( \lambda \), que representa la tasa media de ocurrencia de los eventos.
+- **Promedio Conocido**: La Poisson utiliza un parámetro $\lambda$, que representa la tasa media de ocurrencia de los eventos.
 
 ### Alternativas a la Distribución de Poisson
 

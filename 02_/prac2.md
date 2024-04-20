@@ -8,11 +8,11 @@ La función de verosimilitud se deriva del modelo estadístico que elijas para d
 
 **¿Cómo se formula?**
 
-Imaginemos que tienes un conjunto de datos y un modelo que depende de ciertos parámetros. La función de verosimilitud se construye tomando la función de probabilidad del modelo y aplicándola a tus datos observados, tratando los parámetros como variables. Por ejemplo, con una distribución de Poisson que es común para modelar conteos, la probabilidad de ver exactamente \(k\) eventos es:
+Imaginemos que tienes un conjunto de datos y un modelo que depende de ciertos parámetros. La función de verosimilitud se construye tomando la función de probabilidad del modelo y aplicándola a tus datos observados, tratando los parámetros como variables. Por ejemplo, con una distribución de Poisson que es común para modelar conteos, la probabilidad de ver exactamente $k$ eventos es:
 
-\[ P(X = k) = e^{-\lambda} \frac{\lambda^k}{k!} \]
+$$P(X = k) = e^{-\lambda} \frac{\lambda^k}{k!}$$
 
-donde \( \lambda \) es el parámetro de la tasa media de eventos, y \( k \) son los eventos observados.
+donde $\lambda$ es el parámetro de la tasa media de eventos, y $k$ son los eventos observados.
 
 **¿Cómo se ejecuta?**
 
