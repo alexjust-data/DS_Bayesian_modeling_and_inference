@@ -73,24 +73,6 @@ Algunos procedimientos de aprendizaje conjugados:
 
 9. [Verosimilitud normal]()
 
-* [Elección de los parámetros de la distribución previa]()
-* [Mirando más allá]()
+* [Elección de los parámetros de la distribución previa](02_/Eleccion_parametros.md)
+* [Mirando más allá](02_/Eleccion_parametros.md#mirando-más-allá)
 
- * ####  Elección de los parámetros de la distribución previa
-
-Si bien es cierto que el uso de distribuciones previas conjugadas puede simplificar mucho el proceso de aprendizaje bayesiano y los cálculos que se deben realizar, dando lugar a distribuciones a posteriori fácilmente identificables y con constante de normalización conocida, no debemos perder de vista que todavía hay un escollo que debe solventarse: la elección del valor de los parámetros a priori.
-
-Todas las previas conjugadas que hemos visto en el apartado anterior tienen parámetros cuya interpretación no siempre es directa. Por ejemplo, cuando usamos una distribución previa normal, todos tenemos claro que los parámetros que tenemos que determinar son la media y la desviación estándar. Sin embargo, cuando estamos trabajando con una distribución a priori beta o con una gamma, la relación de los parámetros con la media y la varianza no es tan directa, por lo que es necesario replantearse cómo pueden reflejar esos parámetros la información disponible.
-
-* #### Mirando más allá
-
-
-En todos los procesos estudiados en este documento se dan dos circunstancias muy particulares. Por una parte, la cantidad o parámetro de interés que se estudia está bastante clara y relacionada directamente con los parámetros involucrados en la verosimilitud de forma individual. Por otra parte, estamos suponiendo que tiene sentido utilizar una forma concreta para la distribución previa de ese parámetro. Sin embargo, la situación no siempre es tan favorable.
-
-En la modelización de situaciones reales es habitual encontrarse con situaciones donde la cantidad de interés no son los parámetros de la verosimilitud per se, sino, por ejemplo, alguna combinación, posiblemente no lineal, de estos. Además, es posible que no tengamos conocimiento previo sobre su valor, o lo tengamos, puede ser que no se adapte a la forma determinada por la previa conjugada.
-
-En el primer caso, es posible que utilizar una previa conjugada sobre los parámetros originales no sea la estrategia óptima en cuanto a la transmisión de la información que tenemos sobre dicha cantidad de interés. Por poner un ejemplo, imaginad que en el proceso de crecimiento de una planta estamos midiendo su altura a cabo de un mes, y suponemos que sobre esta variable puedo considerarse una distribución normal(\( \mu,\sigma \)), con ambos parámetros desconocidos. Sin embargo, el parámetro sobre el que realmente tenemos información es el coeficiente de variación. Es decir, no tenemos conocimiento sobre \( \mu \) sobre o, sino sobre \( CV = \frac{\sigma}{\mu} \). Una situación similar se da en el caso de los modelos de regresión lineal, donde las cantidades de interés son los diferentes coeficientes del predictor lineal.
-
-Por otra parte, en el caso de no tener información sobre la cantidad de interés o, por algún motivo, no querer incorporarla al estudio, es posible que debamos recurrir a lo que se conoce como distribuciones previas objetivas o mínimamente informativas. Este tipo de distribuciones suelen obtenerse mediante un estudio exhaustivo del proceso matemático de incorporación de información en el escenario estudiado y, en la mayoría de los casos, no serán previas conjug
-
-En todos estos casos la obtención directa de la distribución marginal no está garantizada, lo que supone no conocer por completo la distribución a poste- riori. En estos casos será necesario recurrir a los métodos de simulación de los que ya os comenzamos a hablar en el reto anterior.
