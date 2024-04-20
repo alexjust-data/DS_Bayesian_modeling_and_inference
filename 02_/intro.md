@@ -1,5 +1,3 @@
-Este apartado se subraya la importancia de la selección cuidadosa de la distribución a priori para facilitar el cálculo de la distribución a posteriori y cómo la elección de una distribución `conjugada previa` puede simplificar este proceso.
-
 Cuando se realiza una inferencia bayesiana con datos binarios, la distribución a priori y la verosimilitud trabajan juntas para proporcionar una distribución a posteriori. La belleza de usar la distribución beta como a priori para una verosimilitud Bernoulli es que ambas son matemáticamente "conjugadas", lo que significa que la forma funcional de la distribución posterior permanecerá en la misma familia (beta), simplificando la actualización de las creencias con nueva evidencia.
 
 1. **Función de Verosimilitud `L(θ, y)`**: Esta función indica la probabilidad de los datos observados `y` dado un parámetro `θ`. Se determina por el modelo estadístico que se utiliza. Por ejemplo, para un modelo de lanzamiento de moneda, se emplearía una distribución de Bernoulli para la verosimilitud, donde `θ` sería la probabilidad de obtener cara.
@@ -7,6 +5,20 @@ Cuando se realiza una inferencia bayesiana con datos binarios, la distribución 
 2. **Distribución a Priori `p(θ)`**: Representa el conocimiento o creencias previas acerca del parámetro `θ` antes de ver los datos. La elección de esta distribución es más subjetiva y puede ser desafiante, ya que depende del conocimiento previo sobre el parámetro a inferir.
 
 El desafío con la distribución a priori es seleccionar una que permita calcular de forma manejable una distribución a posteriori `p(θ | y)` que se combine con la verosimilitud proporcionada por los datos.
+
+Cuando no estamos trabajando con datos binarios, el concepto de previas conjugadas sigue siendo una herramienta poderosa en el aprendizaje bayesiano. La idea clave es elegir una distribución previa que sea matemáticamente conveniente con respecto a la verosimilitud, de tal manera que la distribución a posteriori resultante sea fácil de calcular y pertenezca a la misma familia de distribuciones que la previa. Este enfoque no está limitado a datos binarios y se puede aplicar a varios tipos de datos y modelos.
+
+Por ejemplo, si tus datos siguen una distribución normal, que es común en muchas aplicaciones prácticas, podrías usar una previa normal para la media si esta es desconocida, y una previa gamma o inversa-gamma para la varianza si también es desconocida. La conjugación aquí significa que, tras observar los datos y aplicar la verosimilitud normal, la distribución a posteriori para la media también será normal, y para la varianza será gamma o inversa-gamma, facilitando la interpretación y el cálculo de las estimaciones posteriores.
+
+Para introducir las previas conjugadas en un contexto no binario, podríamos seguir estos pasos:
+
+1. Determinar la forma de la verosimilitud: Esto depende de la naturaleza de tus datos. Por ejemplo, si los datos parecen distribuirse normalmente, la verosimilitud que usarías sería la función de densidad normal.
+2. Identificar la familia de distribuciones conjugadas: Busca una distribución previa que, cuando se combine con tu verosimilitud elegida, resulte en una distribución a posteriori de la misma familia. Las tablas de distribuciones conjugadas pueden ser útiles aquí.
+3. Selección de la previa: Elige parámetros para tu distribución previa conjugada que reflejen tu conocimiento o incertidumbre antes de ver los datos. Esto podría basarse en conocimientos anteriores, información experta, o ser una distribución no informativa si careces de información previa.
+4. Actualización a la distribución a posteriori: Usa el teorema de Bayes para actualizar tu previa con los datos observados, lo que te dará la distribución a posteriori. Dado que has elegido una previa conjugada, deberías poder realizar esta actualización de manera analítica o con cálculos simplificados.
+5. Interpretación: Interpreta los resultados a partir de tu distribución a posteriori, que te dará una medida de creencia actualizada en los parámetros de tu modelo después de haber visto los datos.
+
+El uso de previas conjugadas es especialmente valioso cuando necesitas realizar actualizaciones repetidas a medida que llegan nuevos datos, un proceso común en entornos de aprendizaje automático y estadística.
 
 ### Distribuciones Conjugadas Previas
 
