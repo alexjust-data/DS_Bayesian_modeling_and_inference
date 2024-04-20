@@ -20,7 +20,7 @@ Para introducir las previas conjugadas en un contexto no binario, podríamos seg
 
 El uso de previas conjugadas es especialmente valioso cuando necesitas realizar actualizaciones repetidas a medida que llegan nuevos datos, un proceso común en entornos de aprendizaje automático y estadística.
 
-### Distribuciones Conjugadas Previas
+**Distribuciones Conjugadas Previas**
 
 La solución a este desafío es el uso de `distribuciones conjugadas previas`. Al utilizar una distribución a priori que es conjugada de la verosimilitud del modelo, se asegura que la distribución a posteriori pertenezca a la misma familia de la distribución a priori, simplificando el cálculo.
 
