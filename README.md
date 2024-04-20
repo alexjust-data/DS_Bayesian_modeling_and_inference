@@ -65,13 +65,10 @@ Las previas conjugadas lo son con respecto a una verosimilitud concreta, lo que 
 
 Algunos procedimientos de aprendizaje conjugados:
 
-6. [Verosimilitud binomial, distribución previa beta]()
-
-7. [Verosimilitud de Poisson y previa gamma]()
-
-8. [Verosimilitud exponencial distribución a priori gamma]()
-
-9. [Verosimilitud normal]()
+6. [Verosimilitud binomial, distribución previa beta](02_/Verosimilitud_binomial_previa_beta.md)
+7. [Verosimilitud de Poisson y previa gamma](02_/Verosimilitud_Poisson_previa_gamma.md)
+8. [Verosimilitud exponencial distribución a priori gamma](02_/Verosimilitud_exponencial_priori_gamma.md)
+9. [Verosimilitud normal](02_/Verosimilitud_normal.md)
 
 * [Elección de los parámetros de la distribución previa](02_/Eleccion_parametros.md)
 * [Mirando más allá](02_/Eleccion_parametros.md#mirando-más-allá)
