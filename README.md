@@ -75,4 +75,4 @@ Algunos procedimientos de aprendizaje conjugados:
 
 #### Caso práctico : estimar número de mensajes WhatsApp que recibe un adolescente
 
-10. [Caso práctico]()
+10. [Caso práctico](02_/Practica_02_.pdf)

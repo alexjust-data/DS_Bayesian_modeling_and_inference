@@ -1,21 +1,26 @@
 ---
-title: "**Caso práctico del reto 2**. Whatsappeando con Poisson"
+title: 'Whatsappeando con Poisson'
 author: "Anabel Forte, Gonzalo García-Donato y Joaquín Martínez-Minaya"
-output: 
+output:
   pdf_document:
-    number_sections: TRUE
-    toc: TRUE
+    number_sections: yes
+    toc: yes
+  html_document:
+    toc: yes
+    df_print: paged
 fontsize: 11pt
 header-includes:
-   - \usepackage{natbib}
-   - \usepackage{color}
-   - \usepackage{vmargin}
-   - \setpapersize{A4}
-   - \usepackage[spanish]{babel}
-   - \renewcommand{\baselinestretch}{1.5}
+- \usepackage{natbib}
+- \usepackage{color}
+- \usepackage{vmargin}
+- \setpapersize{A4}
+- \usepackage[spanish]{babel}
+- \renewcommand{\baselinestretch}{1.5}
 ---
 
-
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, message = FALSE, fig.width = 8, fig.height = 5, out.width = "0.8\\textwidth")
+```
 
 \newpage
 
@@ -52,7 +57,7 @@ siendo sus dos primeros momentos exactamente iguales.
 En el apartado anterior hemos definido nuestra variable de interés y, con ella, la distribución de Poisson. Sin embargo, cuando hacemos un análisis estadístico disponemos de mediciones o, dicho de otra forma, de realizaciones de esa variable aleatoria. Para extraer información sobre esas mediciones y poder hacer inferencia sobre el parámetro de interés $\lambda$ necesitamos calcular la función de verosimilitud.
 
 Así, dado un conjunto de observaciones $y_i$ para $i = 1, \ldots, 25$, la función de verosimilitud Poisson es proporcional a 
-$$L(\lambda\mid \mathcal{D})\propto e^{-n\lambda}\lambda^{r},$$
+$$L(\lambda\mid D)\propto e^{-n\lambda}\lambda^{r},$$
 donde $r=\sum_{i=1}^{n} y_i$, es decir, $r$ es el número total de mensajes de WhatsApp que reciben los veinticinco adolescentes en una hora. Es importante darse cuenta de que estamos utilizando el signo $\propto$ para indicar que las dos cantidades son iguales, a falta de una constante. En concreto, la igualdad, como se ha visto en teoría, se logra diviendo por el productorio del factorial de cada $y_i$. 
 
 La expresión anterior se puede calcular en R con el siguiente código: 
@@ -201,10 +206,10 @@ qgamma(0.975, aP, bP)
 Hasta ahora hemos hecho inferencia sobre el parámetro del modelo, $\lambda$. Ahora bien, nos podríamos preguntar, si escogemos al azar un adolescente, ¿cuántos mensajes de WhatsApp recibirá en un día no lectivo? Para ello, hemos de obtener la distribución predictiva.
 
 ## Distribución predictiva: gamma-Poisson
-Otras distribuciones importantes en el contexto bayesiano, como ya sabemos, son las distribuciones predictivas a priori y a posteriori, $p(y)$ y $p(y\mid \mathcal{D})$. La distribución predictiva a priori se calcula integrando sobre las distribuciones a priori de los parámetros: 
+Otras distribuciones importantes en el contexto bayesiano, como ya sabemos, son las distribuciones predictivas a priori y a posteriori, $p(y)$ y $p(y\mid D)$. La distribución predictiva a priori se calcula integrando sobre las distribuciones a priori de los parámetros: 
 $$p(Y=y)=\int_\Theta p(y\mid \lambda)p(\lambda)d\lambda,$$
 mientras que la distribución predictiva a posteriori se calcula integrando sobre las distribuciones a posteriori de los parámetros:
-$$p(Y=y\mid \mathcal{D})=\int_\Theta p(y\mid \lambda)p(\lambda\mid \mathcal{D})d\lambda.$$
+$$p(Y=y\mid D)=\int_\Theta p(y\mid \lambda)p(\lambda\mid D)d\lambda.$$
 Para el caso particular de gamma-Poisson, la distribución predictiva a posteriori del total de conteos en $n$ nuevas observaciones ($r$) es una distribución conocida como **gamma-Poisson**.
 
 La gamma-Poisson es un distribución de probabilidad para una variable discreta $r$ con soporte y los números naturales, incluyendo el 0. Además, depende de tres parámetros: $a$, $b$ y $N$. Su función de probabilidad es:
