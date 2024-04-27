@@ -44,7 +44,7 @@ donde $\epsilon_i$ ~ normal(0, $\sigma$). Con el siguiente bucle, en el que prac
 > ##### Figura 6. 
 > Representación de 9 simulaciones del vector de temperaturas en 40 días consecutivos siguiendo el modelo autorregresivo de orden 1
 
-![](../img/8.png)
+![](/img/8.png)
 
 ```r
 > plot(y.sim, type="l")

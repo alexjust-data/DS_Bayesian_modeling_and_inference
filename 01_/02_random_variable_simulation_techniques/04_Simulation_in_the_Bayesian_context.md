@@ -96,6 +96,5 @@ El gráfico resultante está en la Figura 5, resultando esta distribución de fr
 
 Figura 5 Aproximación de la función de densidad _a posteriori_ $p(\theta | Y = 21.75)$ a partir de una simulación de tamaño $N = 5000$ de esta distribución. Este histograma sugiere que la moda _a posteriori_ está en el límite inferior, 0.30 (hecho este que ya podíamos ver en la forma analítica de la densidad, que es decreciente para $\theta$)
 
-![](../img/7.png)
-
+![](/img/7.png)
 
