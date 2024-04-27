@@ -42,10 +42,11 @@ Los procedimientos de aprendizaje conjugados en estadística bayesiana involucra
    - **Verosimilitud:** Bernoulli o Binomial (para ensayos independientes con dos resultados posibles).
    - **Priori Conjugada:** Beta.
    - **Resultado:** La distribución a posteriori es Beta con parámetros actualizados según los éxitos y fracasos observados.
+
+      > ![](../img/15.png)
       > La distribución previa azul es bastante ancha, lo que indica una incertidumbre relativamente alta o una creencia poco informativa sobre la probabilidad de éxito en un ensayo de Bernoulli antes de ver los datos. La distribución posterior roja es más puntiaguda y está desplazada hacia un valor específico de probabilidad, lo que sugiere que los datos observados han proporcionado información que ajusta y refina la creencia acerca de la probabilidad de éxito.
       >
       > Este cambio de una previa más plana y ancha a una posterior más estrecha y puntiaguda es típico en análisis bayesianos: al obtener datos, las creencias se actualizan, y la incertidumbre se reduce respecto a la estimación del parámetro de interés.
-      > ![](../img/15.png)
 
 2. **Normal con varianza conocida y Normal**:
    - **Verosimilitud:** Normal con varianza conocida.
