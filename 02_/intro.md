@@ -71,7 +71,7 @@ Los procedimientos de aprendizaje conjugados en estadística bayesiana involucra
 Estos pares permiten actualizaciones analíticas y directas de la distribución previa con la incorporación de nuevos datos.
 
 
-### Inferencia Bayesiana con Datos No Binarios
+## Inferencia Bayesiana con Datos No Binarios
 
 En el contexto de la inferencia bayesiana, el proceso general no cambia significativamente cuando los datos no son binarios, pero las formas específicas de las distribuciones a priori, de verosimilitud y a posteriori pueden variar dependiendo del tipo de datos y del modelo subyacente.
 
