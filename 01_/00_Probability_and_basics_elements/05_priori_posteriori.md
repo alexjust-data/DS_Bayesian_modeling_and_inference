@@ -132,7 +132,7 @@ $$
 >
 >Se observa en ambos casos un desplazamiento en la distribución hacia la derecha puesto que la observación $y = 0.15$ eleva nuestra percepción original sobre $\mu$. En este problema, la desviación típica de la variable aleatoria $Y$ es conocida ( $\sigma = 0.01$ ) que es mucho menor que la $\sigma_y = 0.025$ y por lo tanto la observación reduce en mucho la incertidumbre). Sin embargo, en b) la reducción de la incertidumbre es menor puesto que, la observación no tiene una precisión tan grande en comparación con $\sigma_y = 0.025$
 >
->![](../img/2.png)
+>![](/img/2.png)
 >
 > Podemos elaborar un poco esta expresión para observar que una media ponderada entre $\mu_y$ y $y$, en concreto:
 >
@@ -167,7 +167,7 @@ plot(marg, from=5, to=25, xlab="y", ylab="prior predictive")
 Obtenemos la representación siguiente de la función de densidad $a$ priori para la variable aleatoria $Y$. Observamos que es unimodal con moda en y=0, por lo que valores alejados del 0 tienden a ser menos probables. Por este motivo, la observación en el caso del ejemplo, en el que se observó $Y=21.75$, resulta sospechosa.
 
 
-![](../img/3.png)
+![](/img/3.png)
 
 En los ejemplos vistos hasta ahora la información experimental proviene de una única observación Y. Sin embargo, lo más habitual es que el experimento observacional proporcione valores de una muestra $n$ de variables aleatorias $Y = (Y_1,Y_2,…,Y_n)$, que conforman un vector aleatorio. En la situación del ejemplo [3](04_Bayes_variables_continuas.md#ejemplo-3) lo lógico es obtener varias mediciones de tiempos entre puestas y eclosión de huevos de peces abisales para obtener mayor información sobre la concentración salina.
 

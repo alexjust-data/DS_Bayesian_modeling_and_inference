@@ -75,7 +75,7 @@ En el ejemplo anterior hemos incidido en la importante noción de independencia 
 > Referida al ejemplo 5 sobre el lanzamiento de un dado en la estación espacial internacional. Función de verosimilitud para $\theta$ (número de caras en el dado) para cada uno de los posibles escenarios de nuestra observada. En el gráfico a) todas las $y_i$ $\leq 6$ (en cuyo caso la más verosímil es $\theta = 6$); en b) todas las observaciones $y_i$ $\leq 8$ y alguna $y_i > 6$ (en cuyo caso la observación es mayor que $8$ (en cuyo caso el único valor verosímil para $\theta$ es $16$). En todos los casos la función de verosimilitud en $\theta = 16$ es muy pequeña $(16^{-5})$, pero mayor que cero
 >
 >
->![](../img/4.png)
+>![](/img/4.png)
 >_
 
 ---
@@ -104,7 +104,7 @@ a la que dedicaremos parte del tema siguiente. En la Figura 3 hemos representado
 > _
 > ###### Figura 3
 > Referido al ejemplo 6 sobre encuestas, la función de verosimilitud para $\pi$. En el gráfico a) para una muestra con $n = 32$ y $\sum_{i=1}^{n} y_i = 24$; en b) la muestra era de $n = 100$ y $\sum_{i=1}^{n} y_i = 75$. En ambos casos la proporción observada de éxito es la misma (0.75) pero en el caso b) la función de verosimilitud es más apuntada por tener más información. Nótese que la función de verosimilitud no es una función de densidad y por lo tanto no tiene porqué integrar 1
-> ![](../img/5.png)
+> ![](/img/5.png)
 > _
 
 
