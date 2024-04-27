@@ -69,3 +69,28 @@ Los procedimientos de aprendizaje conjugados en estadística bayesiana involucra
    - **Resultado:** La distribución a posteriori es Dirichlet con parámetros actualizados por los recuentos de observaciones por categoría.
 
 Estos pares permiten actualizaciones analíticas y directas de la distribución previa con la incorporación de nuevos datos.
+
+
+### Inferencia Bayesiana con Datos No Binarios
+
+En el contexto de la inferencia bayesiana, el proceso general no cambia significativamente cuando los datos no son binarios, pero las formas específicas de las distribuciones a priori, de verosimilitud y a posteriori pueden variar dependiendo del tipo de datos y del modelo subyacente.
+
+#### Selección del Modelo y las Distribuciones
+
+- **Datos continuos**: Si tienes datos que siguen una distribución normal, podrías utilizar una distribución normal para la verosimilitud y elegir una distribución conjugada como la distribución normal inversa gamma para la a priori si estimas tanto la media como la varianza, o una normal para la media si la varianza es conocida.
+- **Datos de conteo**: Si los datos representan conteos o números enteros, como el número de eventos en un intervalo de tiempo, podrías modelarlos usando una distribución de Poisson para la verosimilitud y una distribución Gamma para la a priori (si se considera la tasa como desconocida).
+
+#### Cálculo de la Verosimilitud
+
+Independientemente del tipo de datos, la verosimilitud se calcula utilizando la probabilidad de observar los datos dados los parámetros del modelo. Para datos continuos, esto podría ser la densidad de la distribución normal, y para datos de conteo, la función de masa de probabilidad de la Poisson.
+
+#### Actualización Bayesiana
+
+- Se combinan la información a priori (creencias previas sobre los parámetros antes de ver los datos) y la información proporcionada por los datos actuales (a través de la verosimilitud) para obtener la distribución a posteriori.
+- Para muchos modelos comunes, especialmente aquellos que usan distribuciones conjugadas, esta actualización puede realizarse de forma analítica, resultando en una nueva distribución que es fácil de interpretar y usar para inferencias posteriores.
+
+#### Distribución a Posteriori
+
+La distribución a posteriori refleja la actualización de nuestras creencias sobre los parámetros del modelo después de considerar los datos. En modelos donde no es posible una solución analítica o donde las distribuciones no son conjugadas, métodos numéricos como el muestreo de Monte Carlo por cadenas de Markov (MCMC) pueden ser utilizados para aproximarse a la distribución a posteriori.
+
+La inferencia bayesiana es muy flexible y puede adaptarse a muchos tipos de datos y modelos. Lo importante es elegir correctamente las distribuciones a priori y de verosimilitud que mejor se adapten a la naturaleza de los datos y al conocimiento previo del problema en cuestión.
