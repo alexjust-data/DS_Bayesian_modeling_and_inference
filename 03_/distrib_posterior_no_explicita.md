@@ -335,10 +335,10 @@ y en otro caso, la cadena no cambia, por lo que $x^{(t)} = x^{(t-1)}$. Observamo
 
 El procedimiento iterativo quedaría:
 
-1. Inicializar con \(X^{(0)}\).
-2. Para \(t = 1, \ldots, N\):
-   a. Simular \(x^{prop}\) de la distribución de propuesta \(q(x \mid x^{(t-1)})\).
-   b. Calcular la probabilidad de aceptación del salto a y simular un valor \(u\) de una uniforme(0,1).
+1. Inicializar con $X^{(0)}$.
+2. Para $t = 1, \ldots, N$:
+   a. Simular $x^{prop}$ de la distribución de propuesta $q(x \mid x^{(t-1)})$.
+   b. Calcular la probabilidad de aceptación del salto a y simular un valor $u$ de una uniforme(0,1).
    c. Definir:
       \[
       X^{(t)} = \begin{cases} 
@@ -415,7 +415,7 @@ sim <- sim[-(1:n.burnin), ]
 sim <- sim[seq(1, length(sim), by=n.thin), ]
 ```
 
-Ahora podemos utilizar las simulaciones en `sim` para aproximar características teóricas de la distribución de \(X\). Por ejemplo, la media (esperanza) o la desviación típica:
+Ahora podemos utilizar las simulaciones en `sim` para aproximar características teóricas de la distribución de $X$. Por ejemplo, la media (esperanza) o la desviación típica:
 
 ```r
 mean(sim)
@@ -424,7 +424,8 @@ sd(sim)
 > [1] 1.981932
 ```
 
-La ejecución de la función mh viene acompañada de la proporción de saltos aceptados (frecuencia en la que \(x^{(t)} = x^{prop}\)). En nuestro caso esta proporción es 0.55. Si queremos abarcar esta proporción, debemos usar una distribución de propuesta de mayor varianza que la utilizada.
+La ejecución de la función mh viene acompañada de la proporción de saltos aceptados 
+(frecuencia en la que $x^{(t)} = x^{prop}$ ). En nuestro caso esta proporción es 0.55. Si queremos abarcar esta proporción, debemos usar una distribución de propuesta de mayor varianza que la utilizada.
 
 
 
