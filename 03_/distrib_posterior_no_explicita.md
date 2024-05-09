@@ -48,9 +48,13 @@ Nuestro segundo ejemplo tiene dos parámetros y, como en el caso anterior, la di
 En este caso vamos a ver un modelo sencillo de punto de cambio en el que las primeras $m$ observaciones $Y_1, \dots, Y_m$ se distribuyen Poisson de media $\lambda$ (desconocida), mientras que las siguientes $2m$ observaciones $Y_{m+1} \dots Y_{3m}$ también Poisson pero de media $\delta \lambda$ donde $\delta$ (también desconocido) es mayor que 1. Todas las observaciones son independientes entre sí:
 
 $$
-Y_i \sim \text{Pois}(\lambda), \quad i = 1, 2, \dots, m
+Y_i \sim \text{Pois}(\lambda), \quad i = 1, 2, \dots, m   
+$$
+
+$$
 Y_j \sim \text{Pois}(\delta \lambda), \quad j = m+1, m+2, \dots, 3m
 $$
+
 
 Esta situación se podría corresponder con un análisis estadístico de calidad en el que se observan diariamente los defectos producidos por cierta maquinaria. En las condiciones habituales, la media de defectos al día es un valor desconocido al que denotaremos $\lambda$. A partir del día $m + 1$ se propone un sistema de ahorro que requiere en la sensibilidad de la producción y que, por tanto, puede haber aumentado el número de defectos multiplicados por otro valor, también desconocido y que denotaremos $\delta$.
 
@@ -106,7 +110,7 @@ Imaginemos que cada cinco minutos la gente de un supermercado se acerca a la col
 
 La primera vez que sale estar observando la variable aleatoria $X(0)$ número de personas en la cola en el instante inicial $t = 0$, en el tiempo $t = 1$ observará $X(1)$ y así sucesivamente. A $X(0)$ se le denomina estado inicial, mientras que, a $X(t)$, se le conoce como estado del proceso en el momento $t$.
 
-En este escenario, llamamos *espacio de estados* al conjunto de los posibles valores que puede tomar cada una de las variables $X(t)$, que en nuestro caso sería $ \{0,1,2,...,7\} $.
+En este escenario, llamamos *espacio de estados* al conjunto de los posibles valores que puede tomar cada una de las variables $X(t)$, que en nuestro caso sería ${0,1,2,...,7}$.
 
 #### Cadenas de Markov
 
