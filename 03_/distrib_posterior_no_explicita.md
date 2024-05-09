@@ -210,7 +210,7 @@ Si repetimos el ejercicio anterior para un número $t \to \infty$, observaremos 
 
 El estudio detallado de la existencia de la distribución estacionaria en cadenas de Markov queda fuera del alcance de esta introducción al tema. Basta saber que las cadenas de Markov con la propiedad de que podemos ir de un estado cualquiera a otro en un número finito de pasos (la cadena se llama irreducible) tienen distribución estacionaria y esta es única.
 
-En cadenas de Markov con espacio de estados finito, la distribución estacionaria $\pi$ se obtiene del sistema de ecuaciones $P^t P = P^{*}$ (cuya solución en el ejemplo del cine da $\pi = (3/7, 4/7)$).
+En cadenas de Markov con espacio de estados finito, la distribución estacionaria $\pi$ se obtiene del sistema de ecuaciones $P^t P = P^{*}$ (cuya solución en el ejemplo del cine da $\pi = (3/7, 4/7)$ ).
 
 La existencia de la distribución estacionaria es el aspecto más importante de las cadenas de Markov para su uso en la inferencia bayesiana. Más concretamente, los métodos de simulación Monte Carlo por cadenas de Markov (MCMC) son simulaciones de procesos aleatorios de cadenas de Markov cuya distribución estacionaria es una distribución de interés, que, en el caso bayesiano, será la distribución a posteriori. Simulando la cadena después de un número suficiente de pasos (lo que se llama etapa de calentamiento o _burning_) estaremos obteniendo simulaciones de la distribución deseada. Estas simulaciones son dependientes entre sí, pero si vamos descartando unas pocas cada ciertas iteraciones, nos aseguramos que sean simulaciones prácticamente independientes (lo que se conoce como _thinning_).
 
