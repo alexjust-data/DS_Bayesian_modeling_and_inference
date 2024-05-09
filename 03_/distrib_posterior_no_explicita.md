@@ -210,7 +210,7 @@ Si repetimos el ejercicio anterior para un número $t \to \infty$, observaremos 
 
 El estudio detallado de la existencia de la distribución estacionaria en cadenas de Markov queda fuera del alcance de esta introducción al tema. Basta saber que las cadenas de Markov con la propiedad de que podemos ir de un estado cualquiera a otro en un número finito de pasos (la cadena se llama irreducible) tienen distribución estacionaria y esta es única.
 
-En cadenas de Markov con espacio de estados finito, la distribución estacionaria $\pi$ se obtiene del sistema de ecuaciones $P^t P = P^*$ (cuya solución en el ejemplo del cine da $\pi = (3/7, 4/7)$).
+En cadenas de Markov con espacio de estados finito, la distribución estacionaria $\pi$ se obtiene del sistema de ecuaciones $P^t P = P^{*}$ (cuya solución en el ejemplo del cine da $\pi = (3/7, 4/7)$).
 
 La existencia de la distribución estacionaria es el aspecto más importante de las cadenas de Markov para su uso en la inferencia bayesiana. Más concretamente, los métodos de simulación Monte Carlo por cadenas de Markov (MCMC) son simulaciones de procesos aleatorios de cadenas de Markov cuya distribución estacionaria es una distribución de interés, que, en el caso bayesiano, será la distribución a posteriori. Simulando la cadena después de un número suficiente de pasos (lo que se llama etapa de calentamiento o _burning_) estaremos obteniendo simulaciones de la distribución deseada. Estas simulaciones son dependientes entre sí, pero si vamos descartando unas pocas cada ciertas iteraciones, nos aseguramos que sean simulaciones prácticamente independientes (lo que se conoce como _thinning_).
 
@@ -220,9 +220,9 @@ A continuación estudiaremos los dos más utilizados: el muestreo de Gibbs y el 
 
 ### 3. MCMC: muestreo de Gibbs y Metropolis-Hastings
 
-El objetivo es obtener una muestra simulada de un vector aleatorio $X$ con función de densidad $p^*$ (que posiblemente no conozcamos en forma explícita), construida a partir de una cadena de Markov $X^{(0)}, X^{(1)}, \ldots$ cuya distribución estacionaria sea $p^*$. El uso de la negrita ahora en las $X$ nos advierte de que la cadena es potencialmente de naturaleza vectorial y, por tanto, cada $X^{(t)}$ está constituido por varias variables aleatorias.
+El objetivo es obtener una muestra simulada de un vector aleatorio $X$ con función de densidad $p^{*}$ (que posiblemente no conozcamos en forma explícita), construida a partir de una cadena de Markov $X^{(0)}, X^{(1)}, \ldots$ cuya distribución estacionaria sea $p^{*}$. El uso de la negrita ahora en las $X$ nos advierte de que la cadena es potencialmente de naturaleza vectorial y, por tanto, cada $X^{(t)}$ está constituido por varias variables aleatorias.
 
-Es importante hacer aquí un inciso para indicar que la notación utilizada va más allá del ámbito de la inferencia bayesiana, ya que estas técnicas sirven, en general, para estudiar distribuciones de probabilidad cuya forma es desconocida. En este sentido, cuando hablamos de un vector aleatorio $X$, en inferencia bayesiana sería más común referirse a él como un vector de parámetros desconocidos del que $p^*$ será su distribución a posteriori.
+Es importante hacer aquí un inciso para indicar que la notación utilizada va más allá del ámbito de la inferencia bayesiana, ya que estas técnicas sirven, en general, para estudiar distribuciones de probabilidad cuya forma es desconocida. En este sentido, cuando hablamos de un vector aleatorio $X$, en inferencia bayesiana sería más común referirse a él como un vector de parámetros desconocidos del que $p^{*}$ será su distribución a posteriori.
 
 En el caso práctico veremos la aplicación de estas técnicas al mundo bayesiano y, en particular, a los ejemplos expuestos al inicio de este documento.
 
@@ -231,17 +231,17 @@ En el caso práctico veremos la aplicación de estas técnicas al mundo bayesian
 Supongamos que el vector aleatorio del que queremos simular, $X$, está formado por las componentes $X_1, X_2, \ldots, X_d$. Supongamos además que podemos obtener simulaciones de las $d$ distribuciones condicionales
 
 $$
-p^*(X_i \mid X_1, \ldots, X_{i-1}, X_{i+1}, \ldots, X_d), \quad i = 1, \ldots, d.
+p^* (X_i \mid X_1, \ldots, X_{i-1}, X_{i+1}, \ldots, X_d), \quad i = 1, \ldots, d.
 $$
 
 Estas condicionales se llaman *condicionales completas* puesto que son las distribuciones de cada componente condicionadas a todas las otras. El muestreo de Gibbs utiliza estas condicionales para construir una cadena de Markov a través del proceso iterativo siguiente:
 
 1. Inicializar con $X^{(0)} = (X^{(0)}_1, \ldots, X^{(0)}_d)$.
 2. Para $t = 1, \ldots, N$:
-   a. Simular $X^{(t)}_1$ de la distribución condicional $p^*(X_1 \mid X^{(t-1)}_2, \ldots, X^{(t-1)}_d)$.
-   b. Simular $X^{(t)}_2$ de la distribución condicional $p^*(X_2 \mid X^{(t)}_1, X^{(t-1)}_3, \ldots, X^{(t-1)}_d)$.
+   a. Simular $X^{(t)}_1$ de la distribución condicional $p^* (X_1 \mid X^{(t-1)}_2, \ldots, X^{(t-1)}_d)$.
+   b. Simular $X^{(t)}_2$ de la distribución condicional $p^* (X_2 \mid X^{(t)}_1, X^{(t-1)}_3, \ldots, X^{(t-1)}_d)$.
    c. ...
-   d. Simular $X^{(t)}_d$ de la distribución condicional $p^*(X_d \mid X^{(t)}_1, \ldots, X^{(t)}_{d-1})$.
+   d. Simular $X^{(t)}_d$ de la distribución condicional $p^* (X_d \mid X^{(t)}_1, \ldots, X^{(t)}_{d-1})$.
 
 
 
@@ -268,9 +268,9 @@ y en consecuencia $Y \sim \text{Beta}(x + 2.20, 16-x)$.
 El procedimiento de generar la cadena de Markov con distribución estacionaria* será:
 
 1. Inicializar con $(X^{(0)}, Y^{(0)})$.
-2. Para $t = 1, \ldots, N$:
-   - Simular $X^{(t)}$ de la distribución binomial(16,$Y^{(t-1)}$).
-   - Simular $Y^{(t)}$ de la distribución Beta($X^{(t)}$+2.20, 16-$X^{(t)}$).
+2. Para $t = 1, \ldots, N$:  
+   - Simular $X^{(t)}$ de la distribución binomial(16, $Y^{(t-1)}$ ).  
+   - Simular $Y^{(t)}$ de la distribución Beta( $X^{(t)}$ + 2.20, 16 - $X^{(t)}$ ).  
 
 La clave está en que tanto la distribución condicional para $X$ como para $Y$ son conocidas y podemos simular de ellas mediante, por ejemplo, las funciones de R `rbinom` y `rbeta`.
 
