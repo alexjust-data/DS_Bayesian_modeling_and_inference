@@ -368,7 +368,7 @@ plot(pstar, from=-2, to=3)
 Observamos que tiene una forma que recuerda a una distribución normal $y$, por tanto, tiene al sentido utilizar la distribución $q(x \mid x^{(t-1)})$ como distribución $N(x^{(t-1)}, 2)$, es decir, una normal de desviación típica 2 y media $x^{(t-1)}$ como distribución de propuesta. Por tanto, el valor de $a$ en la probabilidad de aceptación es:
 
 $$
-\alpha = \min \left( 1, \frac{p^*(x^{prop})q(x^{(t-1)} \mid x^{prop})}{p^*(x^{(t-1)})q(x^{prop} \mid x^{(t-1)})} \right)
+\alpha = \min \left( 1, \frac{p^* (x^{prop}) q(x^{(t-1)} \mid x^{prop} )}{ p^* ( x^{(t-1)} ) q( x^{prop} \mid x^{(t-1)} )} \right)
 $$
 
 En la práctica, para decidir si aceptamos el valor propuesto o no, lo que haremos será simular un valor $u$ de una distribución uniforme(0,1) que compararemos con $a$. Si $u \leq a$ nos quedaremos con el valor propuesto y lo clasificaremos como caso contrario.
