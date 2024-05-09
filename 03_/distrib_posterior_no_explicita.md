@@ -340,12 +340,12 @@ El procedimiento iterativo quedaría:
    a. Simular $x^{prop}$ de la distribución de propuesta $q(x \mid x^{(t-1)})$.
    b. Calcular la probabilidad de aceptación del salto a y simular un valor $u$ de una uniforme(0,1).
    c. Definir:
-      \[
+      $$
       X^{(t)} = \begin{cases} 
       x^{prop} & \text{si } u \leq a \\
       X^{(t-1)} & \text{si } u > a 
       \end{cases}
-      \]
+      $$
 
 Vamos a aplicar este procedimiento a un ejemplo de simulación de una función de densidad univariante.
 
