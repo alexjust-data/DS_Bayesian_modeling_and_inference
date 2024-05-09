@@ -328,7 +328,7 @@ El algoritmo de Metropolis-Hastings es otro método que permite construir una si
 La idea esencial es, dado el valor anterior de la simulación $x^{(t-1)}$, `proponer` un salto $x^{prop}$ a partir de una simulación de una distribución $q(x \mid x^{(t-1)})$ que, a ser posible, debe ser similar a la distribución objetivo $p^*$. La propuesta es aceptada como nuevo valor simulado de la cadena, y por tanto $x^{(t)} = x^{prop}$ con probabilidad
 
 $$
-\alpha = \min \left(1, \frac{p^*(x^{prop})q(x^{(t-1)} \mid x^{prop})}{p^*(x^{(t-1)})q(x^{prop} \mid x^{(t-1)})}\right)
+\alpha = \min \left(1, \frac{p^* (x^{prop}) q(x^{(t-1)} \mid x^{prop})}{p^* (x^{(t-1)}) q(x^{prop} \mid x^{(t-1)})}\right)
 $$
 
 y en otro caso, la cadena no cambia, por lo que $x^{(t)} = x^{(t-1)}$. Observamos que se puede calcular a la agudeza necesaria la constante de integración de $p^*$, ya que esta constante cancela por aparecer en el numerador y denominador de $\alpha$. Esta particularidad del procedimiento de Metropolis-Hastings es especialmente atractivo para la implementación bayesiana, ya que, como hemos visto en la práctica del texto, las constantes de integración son habitualmente desconocidas en la distribución a posteriori.
