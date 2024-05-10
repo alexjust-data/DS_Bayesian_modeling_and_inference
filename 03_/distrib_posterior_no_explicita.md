@@ -48,11 +48,11 @@ Nuestro segundo ejemplo tiene dos parámetros y, como en el caso anterior, la di
 En este caso vamos a ver un modelo sencillo de punto de cambio en el que las primeras $m$ observaciones $Y_1, \dots, Y_m$ se distribuyen Poisson de media $\lambda$ (desconocida), mientras que las siguientes $2m$ observaciones $Y_{m+1} \dots Y_{3m}$ también Poisson pero de media $\delta \lambda$ donde $\delta$ (también desconocido) es mayor que 1. Todas las observaciones son independientes entre sí:
 
 $$
-Y_i \sim \text{Pois}(\lambda), \quad i = 1, 2, \dots, m   
+Y_i | \lambda \sim \text{Pois}(\lambda), \quad i = 1, 2, \dots, m   
 $$
 
 $$
-Y_j \sim \text{Pois}(\delta \lambda), \quad j = m+1, m+2, \dots, 3m
+Y_j | \lambda, \delta \sim \text{Pois}(\delta \lambda), \quad j = m+1, m+2, \dots, 3m
 $$
 
 
@@ -60,29 +60,28 @@ Esta situación se podría corresponder con un análisis estadístico de calidad
 
 Valores de $\delta$ aproximadamente 1 testificarían que no ha habido cambios en la media de defectos, mientras que valores grandes de $\delta$ se suponen muchos más defectos que en la configuración inicial de la producción.
 
-La función de verosimilitud para $y = (y_1, \dots, y_{3m})$ depende entonces de dos parámetros $\lambda, \delta$:
+La función de verosimilitud para $y = (y_1,...,y_m, y_m+1,...,y_{2m})$ depende entonces de dos parámetros $\lambda, \delta$:
 
 $$
-L(\lambda, \delta) = \prod_{i=1}^{m} \text{Pois}(y_i | \lambda) \times \prod_{j=m+1}^{3m} \text{Pois}(y_j | \delta \lambda)
+L(\lambda, \delta) = \prod_{i=1}^{m} \text{Pois}(y_i | \lambda) \times \prod_{j=m+1}^{2m} \text{Pois}(y_j | \delta \lambda)
 $$
 
 
 
-Lo que importa en esta función son los factores que dependen de $\delta$ y $\sigma$, por lo que podemos escribir, en forma más compacta:
+Lo que importa en esta función son los factores que dependen de $\lambda$ o $\delta$, por lo que podemos escribir, en forma más compacta:
 
-$$
-L(\lambda, \sigma, y) = e^{-m(\lambda+1)\sigma} \sigma^{5y_6 + 5y_7}
-$$
+$$L(\lambda, \delta, \mathbf{y}) \propto e^{-m \lambda (1+\delta))} \lambda^{S_1 + S_2} \delta^{S_2},$$
 
-donde $S$ es la suma de las primeras $m$ observaciones y $y_6$ de las $m$ siguientes. Este escenario se parece al proceso con observaciones Poisson y distribución a priori Gamma, pero no coincide exactamente. De hecho, es difícil pensar en distribuciones a priori que fueran conjugadas.
+donde $S_1$ es la suma de las primeras $m$ observaciones y $S_2$ de las $m$ siguientes. Este escenario se parece al proceso con observaciones Poisson y distribución a priori Gamma, pero no coincide exactamente. De hecho, es difícil pensar en distribuciones a priori que fueran conjugadas.
 
-En cualquier caso, suponemos que las distribuciones a priori son $p(\lambda) = \text{Gamma}(\lambda | a,b)$ e independientemente $p(\sigma) = \text{Unif}(1,2)$. Esta última distribución sobre $\sigma$ refleja que no tenemos información a priori para distinguir ningún valor de $\sigma$ en un intervalo inicial. Los parámetros de la prior dependen de la información a priori para $\lambda$ y $\sigma$ se asignan utilizando información de expertos.
+En cualquier caso, suponemos que las distribuciones a priori son $p(\lambda) = \text{Gamma}(\lambda \mid a, b)$ e independientemente $p(\delta) = \text{unif}(\delta \mid 1, 2)$. Esta última distribución sobre $\delta$ refleja que no tenemos información a priori para distinguir ningún valor de $\delta$ en su intervalo inicial. Los parámetros de los que depende la información a priori para $\lambda$ (a y b) se asignan utilizando información de expertos.
 
 La distribución a posteriori es:
 
-$$
-p(\lambda, \sigma \mid y) \propto L(\lambda, \sigma, y) \times e^{-a\lambda} \lambda^{a-1} \sigma^{a+b-1} e^{-b\lambda}, \quad \text{para } \lambda > 0, \sigma \in (1,2).
-$$
+$$p(\lambda, \delta \mid \mathbf{y}) \propto L(\lambda, \delta, \mathbf{y}) p(\lambda, \delta) \propto e^{-m \lambda(1+\delta)} \lambda^{S_1 + S_2} \delta^{S_2} \lambda^{a-1} e^{-b\lambda}$$
+
+donde $\lambda > 0$ y $\delta \in (1, 2).$
+
 
 >Esta distribución a posteriori no es del tipo gamma multiplicada por uniforme como la previa, y por tanto la previa de este problema no es conjugada. Evidentemente, que la previa no tenga esta propiedad no es ningún problema en sí misma, lo que es un gran inconveniente es que la distribución a posteriori no tiene una forma reconocible. Como en el ejemplo anterior, no tiene una forma explícita y su forma implícita no es muy útil para obtener resúmenes, o lo que es lo mismo, inferencias sobre los parámetros desconocidos.
 
@@ -98,7 +97,7 @@ La cuestión es, entonces, qué podemos hacer para hacer inferencia a posteriori
 ### 2. Simulación Monte Carlo por cadenas de Markov (MCMC)
 
 
-Como ya estudiamos en el reto 1, los métodos Monte Carlo hacen referencia al uso de números (pseudo)aleatorios para resolver cuestiones complejas. En el caso de MCMC, los números (pseudo)aleatorios nos ayudarán a simular de una distribución de la que desconocemos su forma y cuya constante es difícil calcular de manera analítica. En el caso concreto del análisis bayesiano, para simular de distribuciones a posteriori muchas veces utilizaremos y dificultaréis la distribución montecarlo. Por ende, para poder entender cómo funcionan los métodos MCMC, debemos entender primero qué son las cadenas de Markov.
+Como ya estudiamos en el reto 1, los métodos Monte Carlo hacen referencia al uso de números (pseudo)aleatorios para resolver cuestiones complejas. En el caso de MCMC, los números (pseudo)aleatorios nos ayudarán a simular de una distribución de la que desconocemos su forma y cuya constante es difícil calcular de manera analítica. En el caso concreto del análisis bayesiano, para simular de distribuciones a posteriori muchas veces multivariantes y difíciles de utilizar de otra forma. Por ende, para poder entender cómo funcionan los métodos MCMC, debemos entender primero qué son las cadenas de Markov.
 
 Las cadenas de Markov son un tipo de proceso estocástico introducido por Andrey Markov en 1906. Su objetivo principal era poder aplicar la ley de los grandes números cuando las variables aleatorias que componen la muestra no son independientes. Pero, empecemos por el principio, ¿qué es un proceso estocástico?
 
@@ -106,9 +105,9 @@ Las cadenas de Markov son un tipo de proceso estocástico introducido por Andrey
 
 El mejor modo de entender qué es un proceso estocástico es mediante un ejemplo.
 
-Imaginemos que cada cinco minutos la gente de un supermercado se acerca a la cola de las cajas y observa cuantas personas hay en ella con el objetivo de controlar que no llegue a 7, ya que, en el momento en el que lo haga, será necesario abrir una nueva caja.
-
-La primera vez que sale estar observando la variable aleatoria $X(0)$ número de personas en la cola en el instante inicial $t = 0$, en el tiempo $t = 1$ observará $X(1)$ y así sucesivamente. A $X(0)$ se le denomina estado inicial, mientras que, a $X(t)$, se le conoce como estado del proceso en el momento $t$.
+>Imaginemos que cada cinco minutos la gente de un supermercado se acerca a la cola de las cajas y observa cuantas personas hay en ella con el objetivo de controlar que no llegue a 7, ya que, en el momento en el que lo haga, será necesario abrir una nueva caja.
+>
+>La primera vez que sale estar observando la variable aleatoria $X(0)$ número de personas en la cola en el instante inicial $t = 0$, en el tiempo $t = 1$ observará $X(1)$ y así sucesivamente. A $X(0)$ se le denomina estado inicial, mientras que, a $X(t)$, se le conoce como estado del proceso en el momento $t$.
 
 En este escenario, llamamos *espacio de estados* al conjunto de los posibles valores que puede tomar cada una de las variables $X(t)$, que en nuestro caso sería ${0,1,2,...,7}$.
 
@@ -121,27 +120,31 @@ Una de las características principales que distingue a los procesos estocástic
 Los tipos de relación temporal pueden ser muy variados y las cadenas de Markov representan un caso particular. Una cadena de Markov es un proceso estocástico $X(t)$, $X(t+1)$, \ldots tal forma que la distribución de $X(t+1)$ condicionada a los valores anteriores $X(t)$, $X(t-1)$, \ldots solo depende de $X(t)$. Esto es:
 
 $$
-P(X(t+1) \mid X(t), X(t-1), \ldots, X(0)) = P(X(t+1) \mid X(t))
+p(x^{(t+1)} \mid X^{(0)} = x_0, X^{(1)} = x_1, \ldots, X^{(t)} = x_t) =
 $$
 
-Para entender mejor las cadenas de Markov, consideremos la situación en la que el espacio de estados es el conjunto finito $s_1, s_2, \ldots, s_k$ (como en el ejemplo introductorio del supermercado). En este caso, las probabilidades de pasar del estado $i$ al estado $j$ en un instante de tiempo $t$, es decir $P(X(t+1) = s_j \mid X(t) = s_i)$, se denomina probabilidad de transición, que se dicen estacionarias si no dependen de $t$.
+$$
+= p(x^{(t+1)} \mid X^{(t)} = x_t)
+$$
 
-Volvamos a nuestro ejemplo. Para que pudiésemos considerarlo una cadena de Markov, necesitaríamos que el número de personas en la cola solo dependa del número de personas en la cola en el instante anterior (es decir, 5 minutos antes). Las probabilidades de transición en la instancia, por ejemplo, que probabilidad hay de pasar a tener 5 personas en la cola cuando actualmente hay 3 ($p_{35}$). En este caso, la probabilidad de transición sería estadísticamente semántica. En consecuencia, los tiempos de la cola no es muy probable en un supermercado.
+Para entender mejor las cadenas de Markov, consideremos la situación en la que el espacio de estados es el conjunto finito $s_1, s_2, \ldots, s_k$ (como en el ejemplo introductorio del supermercado). En este caso, las probabilidades de pasar del estado $s_i$ al estado $s_j$ en un instante de tiempo $t$, es decir $P(x^{(t+1)} = s_j \mid x^{(t)} = s_i)$, se denomina probabilidad de transición, que se dicen estacionarias si no dependen de $t$.
+
+> Volvamos a nuestro ejemplo. Para que pudiésemos considerarlo una cadena de Markov, necesitaríamos que el número de personas en la cola solo dependa del número de personas en la cola en el instante anterior (es decir, 5 minutos antes). Las probabilidades de transición en la instancia, por ejemplo, que probabilidad hay de pasar a tener 5 personas en la cola cuando actualmente hay 3 ($p_{3,5}$). En este caso, la probabilidad de transición sería estadísticamente semántica. En consecuencia, los tiempos de la cola no es muy probable en un supermercado.
 
 En adelante, vamos a trabajar solo con procesos de Markov con probabilidades de transición estacionarias y denotamos:
 
 $$
-p_{ij} = P(X(t+1) = s_j \mid X(t) = s_i),
+p_{ij} = P(X^{(1)} = s_j \mid X^{(0)} = s_i)
 $$
 
 con lo que podemos construir la matriz de transición:
 
 $$
 P = \begin{pmatrix}
-p_{11} & p_{12} & \ldots & p_{1k} \\
-p_{21} & p_{22} & \ldots & p_{2k} \\
+p_{1,1} & p_{1,2} & \ldots & p_{1,k} \\
+p_{2,1} & p_{2,2} & \ldots & p_{2,k} \\
 \vdots & \vdots & \ddots & \vdots \\
-p_{k1} & p_{k2} & \ldots & p_{kk}
+p_{k,1} & p_{k,2} & \ldots & p_{k,k}
 \end{pmatrix}
 $$
 
